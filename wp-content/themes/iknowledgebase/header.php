@@ -8,8 +8,7 @@
         <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
-<!-- <script defer id="convrs-webchat" src="https://webchat.conv.rs/d1dd28ec9891752e632123992c3ecd5d629b3224.js"></script> -->
-<script defer id="convrs-webchat" src="https://webchat.conv.rs/bffe0b85577c6b521458f2a597328dbf2ad2faf2.js"></script>
+<script defer id="convrs-webchat" src="https://webchat.conv.rs/d1dd28ec9891752e632123992c3ecd5d629b3224.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
