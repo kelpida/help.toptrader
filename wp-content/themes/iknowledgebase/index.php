@@ -60,5 +60,16 @@ get_header();
     </div>
 </section>
 
+<section class="chat-blk">
+	<div class="container">
+	<div class="chat-blk-text">
+	<h6>Not finding what you are looking for?</h6>
+	<p>Chat with us or send us an email</p>
+	</div>
+	<div class="button is-info">
+		Chat with us
+	</div>
+</div>
+</section>
 
 <?php get_footer(); ?>

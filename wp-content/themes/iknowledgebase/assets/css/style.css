@@ -9720,4 +9720,27 @@ a.has-text-primary:hover, a.has-text-primary:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
-
+.category-box {
+	width: calc((100% - 60px) / 3);
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background:#ffffff;
+	border-radius:5px;
+		 box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+justify-content:center;
+align-items:center;
+	text-align:center;
+	padding:40px 0;
+	
+	
+}
+.category-box h3 a {
+	color:#333333;
+}
+.category-box h3 {
+	font-weight:bold;
+	font-size:22px;
+}
+.category-box img {
+	height:60px;
+}
