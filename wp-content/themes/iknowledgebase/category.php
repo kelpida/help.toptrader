@@ -19,15 +19,9 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
 				 <?php iknowledgebase_breadcrumbs(); ?>
 			 </div>
 			</div>
-            <div class="columns is-multiline is-centered pt-5<?php iknowledgebase_sidebar_location(); ?>">
-
-                <div class="column is-full-touch"><?php get_sidebar(); ?></div>
-
-                <div class="column is-full-touch is-two-thirds-desktop">
-                    <!-- <div class="box is-mobile">
-						<?#php iknowledgebase_posts_sorter(); ?>
-                    </div> -->
-					<?php if ( have_posts() ) : ?>
+			<div class="row">
+				<div class="col-md-3"><?php get_sidebar(); ?></div>
+				<div class="col-md-9"><?php if ( have_posts() ) : ?>
                         <div class="panel has-background-white">
 							<?php
 							iknowledgebase_get_sticky_posts_in_category();
@@ -38,9 +32,9 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
 							}
 							?>
                         </div>
-						<?php iknowledgebase_the_posts_pagination(); ?><?php endif; ?>
-                </div>
-            </div>
+						<?php iknowledgebase_the_posts_pagination(); ?><?php endif; ?></div>
+			</div>
+
 
         </div>
 

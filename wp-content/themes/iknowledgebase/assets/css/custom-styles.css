@@ -13,6 +13,7 @@ a {
 	font-family: 'Girloy';
 	color:#000000;
 }
+
 .brand-logo {
     max-width: 200px;
     padding: 0;
@@ -62,7 +63,15 @@ display:flex;
 .box {
 	background:none;
 	box-shadow:none;
+	padding:0;
 
+}
+.panel-block {
+	background:#dddddd;
+}
+.panel-block h4 {
+	font-size:16px;
+	margin:0;
 }
 .title {
 	display:none;
@@ -228,4 +237,39 @@ display:flex;
 	max-width:1051px;
 	margin:0 auto;
 	text-align:center;
+}
+.icon.is-small .icon-search {
+	color:#333333;
+}
+.wp-block-categories-list.wp-block-categories {
+	padding:0;
+}
+@media screen and (min-width:641px) and (max-width:900px){
+	.categories-section {
+		justify-content: center;
+	}
+	.category-box {
+		width:50%;
+	
+	}
+}
+@media screen and (max-width:991px){ 
+	.container {
+		max-width:none !important;
+	}
+}
+@media screen and (max-width:640px){
+
+	.categories-section {
+		justify-content: center;
+	}
+	.category-box {
+		width:100%;
+	
+	}
+}
+@media screen and (max-width: 1023px){
+.navbar>.container {
+    display: block !important;
+}
 }
