@@ -90,9 +90,9 @@ function iknowledgebase_widgets_init() {
 }
 
 function reg_scripts() {
-    wp_enqueue_style( 'bootstrapstyle', get_template_directory_uri() . '/css/bootstrap.min.css' );
-    wp_enqueue_style( 'bootstrapthemestyle', get_template_directory_uri() . '/css/bootstrap-theme.min.css' );
-    wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array(), true );
+    wp_enqueue_style( 'bootstrapstyle', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+    wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), true );
+	wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/assets/css/custom-styles.css');
 }
 add_action('wp_enqueue_scripts', 'reg_scripts');
 

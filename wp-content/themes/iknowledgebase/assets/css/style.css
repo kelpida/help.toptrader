@@ -209,7 +209,6 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   --body-background: white;
   --body-svg-color: #F3F4F6;
   --footer-background: #F9FAFB;
-  --footer-copyright-color: #475569;
   --footer-menu-color: #475569;
   --footer-menu-hover-color: #2563EB;
 }
@@ -9192,15 +9191,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   z-index: 100000;
 }
 
-@font-face {
-  font-family: "iknowledgebase";
-  src: url("../font/iknowledgebase.eot");
-  src: url("../font/iknowledgebase.eot?m4qrx6#iefix") format("embedded-opentype"), url("../font/iknowledgebase.woff2?m4qrx6") format("woff2"), url("../font/iknowledgebase.woff?m4qrx6") format("woff"), url("../font/iknowledgebase.ttf?m4qrx6") format("truetype"), url("../font/iknowledgebase.svg?m4qrx6#iknowledgebase") format("svg");
-  font-style: normal;
-  font-weight: 400;
-}
+
 [class^=icon-]:before, [class*=" icon-"]:before {
-  font-family: "iknowledgebase";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -9346,14 +9338,7 @@ body {
   color: var(--footer-menu-color);
   padding-left: 0;
 }
-.footer .copyright {
-  color: var(--footer-copyright-color);
-}
-@media screen and (max-width: 1023px) {
-  .footer .copyright {
-    order: 1;
-  }
-}
+
 .footer a.navbar-item:focus,
 .footer a.navbar-item:focus-within,
 .footer a.navbar-item:hover,
@@ -9690,7 +9675,6 @@ a.has-text-primary:hover, a.has-text-primary:focus {
 
 .wp-block-page-list li a:before,
 .wp-block-latest-posts li a:before {
-  font-family: "iknowledgebase";
   content: "";
   margin-right: 0.5rem;
   text-decoration: none;
@@ -9703,7 +9687,6 @@ a.has-text-primary:hover, a.has-text-primary:focus {
 
 .wp-block-archives li a:before,
 .wp-block-categories li a:before {
-  font-family: "iknowledgebase";
   content: "";
   margin-right: 0.5rem;
   text-decoration: none;
@@ -9720,27 +9703,4 @@ a.has-text-primary:hover, a.has-text-primary:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
-.category-box {
-	width: calc((100% - 60px) / 3);
-	margin-right: 20px;
-	margin-bottom: 20px;
-	background:#ffffff;
-	border-radius:5px;
-		 box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
-justify-content:center;
-align-items:center;
-	text-align:center;
-	padding:40px 0;
-	
-	
-}
-.category-box h3 a {
-	color:#333333;
-}
-.category-box h3 {
-	font-weight:bold;
-	font-size:22px;
-}
-.category-box img {
-	height:60px;
-}
+
