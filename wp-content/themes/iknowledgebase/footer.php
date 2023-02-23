@@ -13,7 +13,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-3">
-			<img src="http://localhost/help.toptrader.eu/wp-content/uploads/2023/02/cropped-toptrader-logo-black-2.png" class="custom-logo" alt="Help TopTraderEu" decoding="async">
+			<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
+	
 			<div class="copyright">
 				<?php
 				$iknowledgebase_option = get_option( 'iknowledgebase_settings', '' );

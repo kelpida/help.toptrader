@@ -43,43 +43,43 @@ get_header();
 						<?php iknowledgebase_the_posts_pagination(); ?><?php endif; ?> -->
 						<div class="categories-section">
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
+								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.svg">
 								<h3><a href="category/general-questions/">General Questions</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
-								<h3><a href="category/account-verification/">Account Verification</a></h3>
+								<img src="<?php bloginfo('template_url'); ?>/images/registration.svg">
+								<h3><a href="category/registration/">Registration</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
-								<h3><a href="category/registration/">General Question</a></h3>
+								<img src="<?php bloginfo('template_url'); ?>/images/accounts.svg">
+								<h3><a href="category/registration/">Accounts</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
+								<img src="<?php bloginfo('template_url'); ?>/images/verification.svg">
 								<h3><a href="category/verification/">Verification</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
+								<img src="<?php bloginfo('template_url'); ?>/images/deposit.png">
 								<h3><a href="category/deposits-and-withdraws/">Deposits & Withdraws</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
+								<img src="<?php bloginfo('template_url'); ?>/images/platforms.svg">
 								<h3><a href="category/platforms/">Platfroms</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
+								<img src="<?php bloginfo('template_url'); ?>/images/trading.png">
 								<h3><a href="category/trading/">Trading</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
+								<img src="<?php bloginfo('template_url'); ?>/images/signal-center.svg">
 								<h3><a href="category/signal-center/">Signal Center</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
+								<img src="<?php bloginfo('template_url'); ?>/images/finance.svg">
 								<h3><a href="category/finance/">Finance</a></h3>
 							</div>
 							<div class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.png">
+								<img src="<?php bloginfo('template_url'); ?>/images/security.svg">
 								<h3><a href="category/security-and-privacy/">Security & Privacy</a></h3>
 							</div>
 						

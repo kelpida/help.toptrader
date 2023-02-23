@@ -26,7 +26,8 @@
          aria-label="<?php esc_attr_e( 'Main Navigation', 'iknowledgebase' ); ?>">
         <div class="container">
             <div class="navbar-brand">
-				<?php iknowledgebase_brand(); ?>
+				<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
+				<!-- <?php iknowledgebase_brand(); ?> -->
                 <a href="#" role="button" class="navbar-burger burger" id="navigation-burger"
                    aria-label="<?php esc_attr_e( 'Menu', 'iknowledgebase' ); ?>" aria-expanded="false"
                    data-target="main-menu" <?php iknowledgebase_amp_menu_toggle(); ?>>
