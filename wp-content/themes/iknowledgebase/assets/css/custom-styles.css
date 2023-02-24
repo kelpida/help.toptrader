@@ -65,9 +65,10 @@ body.custom-background {
 	padding:0;
 
 }
-.panel-block {
-	background:#dddddd;
+.panel..has-background-white{
+	background:#eeeeee;
 }
+
 .panel-block h4 {
 	font-size:16px;
 	margin:0;
@@ -118,17 +119,27 @@ body.custom-background {
 .search-form.is-relative .button.is-primary:hover {
 	background:white !important;
 	border-left:none !important;
-	border:1px solid #42E4C9;
+	border:1px solid #42E4C9 !important;
 }
 #sidebar .widget.widget_block.content.box {
 	margin-bottom:0 !important;
 	padding-bottom:0 !important;
+}
+.wp-block-archives li a:before, .wp-block-categories li a:before {
+	content:'';
+	margin:0;
 }
 .wp-block-categories-list li a {
 	color:#000000;
 }
 .wp-block-categories-list li a:before {
 	color:#000000;
+}
+.wp-block-categories-list li {
+	background:#dddddd;
+	padding:5px;
+	border-radius:3px;
+	font-size:12px;
 }
 .breadcrumb {
 	margin: 20px auto;
