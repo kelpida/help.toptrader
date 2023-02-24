@@ -96,6 +96,7 @@ get_header();
 					</div>
 					<div class="button is-info">
 						Chat with us
+						<img src="<?php bloginfo('template_url'); ?>/images/messsages3.svg">
 					</div>
 				</div>
 			</section>

@@ -23,7 +23,7 @@ a {
 }
 
 body.custom-background {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
 }
 
 .category-box {
@@ -32,8 +32,7 @@ body.custom-background {
 	margin-bottom: 38px;
 	background:#EEEEEE;
 	border-radius:30px;
-	
-display:flex;
+	display:flex;
 	align-items:center;
 	text-align:center;
 	justify-content:space-between;
