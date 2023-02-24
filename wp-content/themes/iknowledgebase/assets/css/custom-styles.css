@@ -104,6 +104,11 @@ body.custom-background {
 .has-background-grey {
 	background:#eeeeee !important;
 }
+.panel {
+	box-shadow:none;
+	border-radius:20px;
+	padding:20px 15px;
+}
 .panel-block {
 	box-shadow:none;
 	border-radius:20px;
@@ -124,6 +129,24 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	font-size:12px;
 	margin:0;
 	font-family: "Girloy Medium";
+	
+}
+.select.is-primary select {
+	font-family: "Girloy Medium";
+    border-color: #7D4ACE;
+    border-radius: 15px;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.select.is-primary:not(:hover)::after {
+	border-color: #7D4ACE;
+	top:68%;
+}
+.level-item p {
+	font-size:20px;
+	font-family: "Girloy Medium";
+	margin:0 10px 0 0 ;
 }
 .title {
 	display:none;

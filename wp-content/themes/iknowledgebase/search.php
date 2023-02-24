@@ -10,7 +10,7 @@ get_header();
 
     <section class="section">
         <div class="container">
-            <div class="has-text-centered mb-6">
+            <div class="has-text-centered">
 				<?php iknowledgebase_main_image(); ?>
                     <div class="is-max-w-2xl mx-auto">
 						<?php get_search_form(); ?>
@@ -22,7 +22,7 @@ get_header();
                 </div>
 
 				<?php if ( have_posts() ) : ?>
-                    <div class="panel has-background-white">
+                    <div class="panel has-background-grey">
 						<?php
 
 						// Load posts loop.

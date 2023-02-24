@@ -34,5 +34,5 @@ $post_icon = apply_filters( 'iknowledgebase_post_icon', 'icon-book' );
 			<div class="circle"></div>
 		</div>
 	</div>
-	
+</div>
 <div>
