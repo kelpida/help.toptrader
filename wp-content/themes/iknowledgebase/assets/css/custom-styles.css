@@ -8,7 +8,27 @@ a {
   font-style: normal;
   font-weight: 400;
 }
-
+@font-face {
+  font-family: "Girloy Bold";
+  src: url("../font/Gilroy-Bold.eot");
+  src: url("../font/Gilroy-Bold.eot?m4qrx6#iefix") format("embedded-opentype"), url("../font/Gilroy-Bold.woff2?m4qrx6") format("woff2"), url("../font/Gilroy-Bold.woff?m4qrx6") format("woff"), url("../font/Gilroy-Bold.ttf?m4qrx6") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Girloy Semi-Bold";
+  src: url("../font/Gilroy-Semibold.eot");
+  src: url("../font/Gilroy-Semibold.eot?m4qrx6#iefix") format("embedded-opentype"), url("../font/Gilroy-Semibold.woff2?m4qrx6") format("woff2"), url("../font/Gilroy-Semibold.woff?m4qrx6") format("woff"), url("../font/Gilroy-Semibold.ttf?m4qrx6") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Girloy Medium";
+  src: url("../font/Gilroy-Medium.eot");
+  src: url("../font/Gilroy-Medium.eot?m4qrx6#iefix") format("embedded-opentype"), url("../font/Gilroy-Medium.woff2?m4qrx6") format("woff2"), url("../font/Gilroy-Medium.woff?m4qrx6") format("woff"), url("../font/Gilroy-Medium.ttf?m4qrx6") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
 * {
 	font-family: 'Girloy';
 	color:#000000;
@@ -44,6 +64,7 @@ body.custom-background {
 }
 .category-box h3 a {
 	color:#000000;
+	font-family: "Girloy Semi-Bold";
 }
 .category-box h3 {
 	font-weight:bold;
@@ -65,10 +86,9 @@ body.custom-background {
 	padding:0;
 
 }
-.panel..has-background-white{
-	background:#eeeeee;
+.has-background-grey {
+	background:#eeeeee !important;
 }
-
 .panel-block h4 {
 	font-size:16px;
 	margin:0;
@@ -115,6 +135,10 @@ body.custom-background {
 	background:#ffffff;
 	color:#000000;
 	height:50px !important;
+	  font-family: "Girloy Medium";
+}
+.button{
+	  font-family: "Girloy Medium";
 }
 .search-form.is-relative .button.is-primary:hover {
 	background:white !important;
@@ -136,10 +160,13 @@ body.custom-background {
 	color:#000000;
 }
 .wp-block-categories-list li {
+	font-size:12px;
+	margin:5px 0;
+}
+.wp-block-categories-list li.current-cat {
 	background:#dddddd;
 	padding:5px;
 	border-radius:3px;
-	font-size:12px;
 }
 .breadcrumb {
 	margin: 20px auto;
