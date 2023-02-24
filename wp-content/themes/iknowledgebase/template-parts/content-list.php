@@ -12,7 +12,8 @@ $post_icon = apply_filters( 'iknowledgebase_post_icon', 'icon-book' );
 
 <a class="panel-block is-borderless" href="<?php the_permalink(); ?>">
     <span class="panel-icon">
-        <span class="<?php echo esc_attr( $post_icon ); ?>"></span>
+		<img src="<?php bloginfo('template_url'); ?>/images/book.svg"/>
+       
     </span>
     <?php do_action( 'iknowledgebase_post_time');?>
     <h4><?php the_title(); ?></h4>

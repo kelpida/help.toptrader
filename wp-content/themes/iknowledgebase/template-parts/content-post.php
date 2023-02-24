@@ -16,7 +16,10 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
             </figure>
 		<?php endif; ?>
         <div class="content">
-			<p class="breadcrumb-single-post">Articles on <span><?php the_archive_title(); ?></span></p>
+			<div class="breadcrumb-single-post">
+				<img src="<?php bloginfo('template_url'); ?>/images/book.svg"/>
+				<p>Articles on <span><?php the_archive_title(); ?></span></p>
+			</div>
 			<h3><?php the_title(); ?></h3>
 			<?php the_content(); ?>
         </div>
@@ -29,7 +32,7 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
                         <div class="level-item">
                         <span class="icon-text">
                           <span class="icon has-text-primary">
-                            <span class="icon-clock"></span>
+                            <img src="<?php bloginfo('template_url'); ?>/images/updated.svg"/>
                           </span>
                           <span>Updated on <?php iknowledgebase_posted_on(); ?></span>
                         </span>

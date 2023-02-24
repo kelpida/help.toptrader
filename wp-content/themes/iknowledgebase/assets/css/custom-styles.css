@@ -207,9 +207,10 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	font-family: "Girloy Medium";
 }
 
-.back-link{
+.back-link span{
 	font-size:12px;
 	font-family: "Girloy Semi-Bold";
+	margin-left:5px;
 }
 .current-page span {
 	font-family: "Girloy Semi-Bold";
@@ -340,11 +341,15 @@ a.panel-block:hover, label.panel-block:hover h4 {
 .icon.is-small .icon-search {
 	color:#333333;
 }
-.search-form .icon-search {
-	content: '';
-	background-image:url("http://local.help.com/wp-content/themes/iknowledgebase/images/searchnormal1.svg");
-	
+
+.panel-icon {
+	width:30px;
+	height:30px;
 }
+.icon-book::before {
+	content:'';
+}
+
 .search-form .icon-search::before {
 	content: '';
 }
@@ -369,12 +374,19 @@ article p {
 	font-family: "Girloy Medium";
 }
 article .breadcrumb-single-post {
+
+	display: flex;
+	align-items:center;
+}
+article .breadcrumb-single-post p {
 	font-size:14px;
 	font-family: "Girloy Medium";
+	margin:0 0 0 10px;
 }
 article .breadcrumb-single-post span {
 	font-family: "Girloy Semi-Bold";
 }
+
 @media screen and (min-width:641px) and (max-width:900px){
 	.categories-section {
 		justify-content: center;

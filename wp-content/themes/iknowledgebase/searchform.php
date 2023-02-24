@@ -20,7 +20,7 @@ $size = (is_single() || is_archive()) ? '' : ' is-medium';
         <div class="control">
             <button type="submit" class="button is-primary<?php echo esc_attr($size);?>">
                 <span class="icon is-small">
-                    <span class="icon-search"></span>
+                    <img src="<?php bloginfo('template_url'); ?>/images/searchnormal1.svg"/>
                 </span>
             </button>
         </div>
