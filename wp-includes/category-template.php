@@ -174,18 +174,18 @@ function get_the_category_list( $separator = '', $parents = '', $post_id = false
 					if ( $category->parent ) {
 						$thelist .= get_category_parents( $category->parent, true, $separator );
 					}
-					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name . '</a></li>';
+					$thelist .= '<a class="current-page"  href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '><span>' . $category->name . '</span></a></li>';
 					break;
 				case 'single':
-					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '"  ' . $rel . '>';
+					$thelist .= '<a class="current-page" href="' . esc_url( get_category_link( $category->term_id ) ) . '"  ' . $rel . '><span>';
 					if ( $category->parent ) {
 						$thelist .= get_category_parents( $category->parent, false, $separator );
 					}
-					$thelist .= $category->name . '</a></li>';
+					$thelist .= $category->name . '</span></a></li>';
 					break;
 				case '':
 				default:
-					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name . '</a></li>';
+					$thelist .= '<a class="current-page" href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '><span>' . $category->name . '</span></a></li>';
 			}
 		}
 		$thelist .= '</ul>';
@@ -200,10 +200,10 @@ function get_the_category_list( $separator = '', $parents = '', $post_id = false
 					if ( $category->parent ) {
 						$thelist .= get_category_parents( $category->parent, true, $separator );
 					}
-					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name . '</a>';
+					$thelist .= '<a class="current-page" href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '><span>' . $category->name . '</span></a>';
 					break;
 				case 'single':
-					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>';
+					$thelist .= '<a class="current-page" href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>';
 					if ( $category->parent ) {
 						$thelist .= get_category_parents( $category->parent, false, $separator );
 					}
@@ -211,7 +211,7 @@ function get_the_category_list( $separator = '', $parents = '', $post_id = false
 					break;
 				case '':
 				default:
-					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name . '</a>';
+					$thelist .= '<a class="current-page" href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '><span>' . $category->name . '</span></a>';
 			}
 			++$i;
 		}

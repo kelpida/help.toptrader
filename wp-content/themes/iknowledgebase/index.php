@@ -31,43 +31,43 @@ get_header();
 
 				
 						<div class="categories-section">
-							<a class="category-box" href="category/general-questions/">
+							<a class="category-box" href="general-questions/">
 								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.svg">
 								<h3>General <br/>Questions</h3>
 							</a>
-							<a href="category/registration/" class="category-box">
+							<a href="registration/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/registration.svg">
 								<h3>Registration</h3>
 							</a>
-							<a href="category/registration/" class="category-box">
+							<a href="registration/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/accounts.svg">
 								<h3>Accounts</h3>
 							</a>
-							<a href="category/verification/" class="category-box">
+							<a href="verification/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/verification.svg">
 								<h3>Verification</h3>
 							</a>
-							<a href="category/deposits-and-withdraws/" class="category-box">
+							<a href="deposits-and-withdraws/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/deposit.png">
 								<h3>Deposits & <br/>Withdraws</h3>
 							</a>
-							<a href="category/platforms/" class="category-box">
+							<a href="platforms/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/platforms.svg">
 								<h3>Platfroms</h3>
 							</a>
-							<a href="category/trading/" class="category-box">
+							<a href="trading/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/trading.png">
 								<h3>Trading</h3>
 							</a>
-							<a href="category/signal-center/" class="category-box">
+							<a href="signal-center/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/signal-center.svg">
 								<h3>Signal <br/>Center</h3>
 							</a>
-							<a href="category/finance/" class="category-box">
+							<a href="finance/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/finance.svg">
 								<h3>Finance</h3>
 							</a>
-							<a href="category/security-and-privacy/" class="category-box">
+							<a href="security-and-privacy/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/security.svg">
 								<h3>Security & <br/>Privacy</h3>
 							</a>

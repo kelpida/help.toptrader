@@ -264,7 +264,7 @@ function iknowledgebase_breadcrumbs() {
 		echo '<div class="col-md-9 text-left is-active"><a class="current-page" href="' . esc_url( $term_link ) . '"><span>' . esc_html( $object->name ) . '</span></a></div>';
 	} elseif ( is_single() ) {
 		echo '<div class="col-md-9 text-left is-active">' . get_the_category_list( '<div><div>', 'multiple' );
-		echo '<div class="col-md-9 text-left is-active"><a class="current-page" href="' . esc_url( get_permalink() ) . '" aria-current="page">' . esc_html( get_the_title() ) . '</a> </div>';
+		//echo '<div class="col-md-9 text-left is-active"><a class="current-page" href="' . esc_url( get_permalink() ) . '" aria-current="page">' . esc_html( get_the_title() ) . '</a> </div>';
 	} else {
 		echo '<div class="col-md-9 text-left is-active"><a class="current-page" aria-current="page">' . esc_html( wp_strip_all_tags( get_the_archive_title() ) ) . '</a></div>';
 	}
