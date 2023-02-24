@@ -15,7 +15,7 @@
 					</div>
 					<div class="button is-info chat">
 						Chat with us
-						<img src="<?php bloginfo('template_url'); ?>/images/messsages3.svg">
+						<img src="<?php bloginfo('template_url'); ?>/images/messages3.svg">
 					</div>
 				</div>
 			</section>
@@ -106,7 +106,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-					<p>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <strong>89.08% of retail investor accounts lose money when trading CFDs with this provider</strong>. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
+					<p>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <span>89.08% of retail investor accounts lose money when trading CFDs with this provider</span>. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
 			</div>
 		</div>
 	</div>
