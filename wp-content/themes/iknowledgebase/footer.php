@@ -7,6 +7,18 @@
 ?>
 
 </main>
+			<section class="chat-blk">
+				<div class="container">
+					<div class="chat-blk-text">
+						<h6>Not finding what you are looking for?</h6>
+						<p>Chat with us or send us an email</p>
+					</div>
+					<div class="button is-info chat">
+						Chat with us
+						<img src="<?php bloginfo('template_url'); ?>/images/messsages3.svg">
+					</div>
+				</div>
+			</section>
 <footer class="footer">
 
 

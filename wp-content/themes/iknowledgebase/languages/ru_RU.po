@@ -633,7 +633,7 @@ msgid "Search for:"
 msgstr "Поиск для:"
 
 #: searchform.php:17
-msgid "How can we help you?"
+msgid "Search?"
 msgstr "Как мы можем помочь?"
 
 #: template-parts/content-none.php:14

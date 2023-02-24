@@ -617,7 +617,7 @@ msgid "Search for:"
 msgstr ""
 
 #: searchform.php:17
-msgid "How can we help you?"
+msgid "Search?"
 msgstr ""
 
 #: template-parts/content-none.php:14

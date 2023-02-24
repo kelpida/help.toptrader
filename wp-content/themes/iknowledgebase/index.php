@@ -42,62 +42,51 @@ get_header();
 						</div>
 						<?php iknowledgebase_the_posts_pagination(); ?><?php endif; ?> -->
 						<div class="categories-section">
-							<div class="category-box">
+							<a class="category-box" href="category/general-questions/">
 								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.svg">
-								<h3><a href="category/general-questions/">General Questions</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>General <br/>Questions</h3>
+							</a>
+							<a href="category/registration/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/registration.svg">
-								<h3><a href="category/registration/">Registration</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>Registration</h3>
+							</a>
+							<a href="category/registration/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/accounts.svg">
-								<h3><a href="category/registration/">Accounts</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>Accounts</h3>
+							</a>
+							<a href="category/verification/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/verification.svg">
-								<h3><a href="category/verification/">Verification</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>Verification</h3>
+							</a>
+							<a href="category/deposits-and-withdraws/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/deposit.png">
-								<h3><a href="category/deposits-and-withdraws/">Deposits & Withdraws</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>Deposits & <br/>Withdraws</h3>
+							</a>
+							<a href="category/platforms/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/platforms.svg">
-								<h3><a href="category/platforms/">Platfroms</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>Platfroms</h3>
+							</a>
+							<a href="category/trading/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/trading.png">
-								<h3><a href="category/trading/">Trading</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>Trading</h3>
+							</a>
+							<a href="category/signal-center/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/signal-center.svg">
-								<h3><a href="category/signal-center/">Signal Center</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>Signal <br/>Center</h3>
+							</a>
+							<a href="category/finance/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/finance.svg">
-								<h3><a href="category/finance/">Finance</a></h3>
-							</div>
-							<div class="category-box">
+								<h3>Finance</h3>
+							</a>
+							<a href="category/security-and-privacy/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/security.svg">
-								<h3><a href="category/security-and-privacy/">Security & Privacy</a></h3>
-							</div>
+								<h3>Security & <br/>Privacy</h3>
+							</a>
 						
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="chat-blk">
-				<div class="container">
-					<div class="chat-blk-text">
-						<h6>Not finding what you are looking for?</h6>
-						<p>Chat with us or send us an email</p>
-					</div>
-					<div class="button is-info">
-						Chat with us
-						<img src="<?php bloginfo('template_url'); ?>/images/messsages3.svg">
-					</div>
-				</div>
-			</section>
+			
 			<?php get_footer(); ?>

@@ -250,25 +250,25 @@ function iknowledgebase_404_image() {
 function iknowledgebase_breadcrumbs() {
 	$separator        = get_theme_mod( 'iknowledgebase_breadcrumb_separators', '' );
 	$separators_class = ! empty( $separator ) ? ' has-' . esc_attr( $separator ) . '-separator' : '';
-	echo '<nav class="breadcrumb is-size-7 is-hidden-mobile' . esc_attr( $separators_class ) . '" aria-label="breadcrumbs"><ul>';
-	echo ' <li><a href="' . esc_url( home_url() ) . '"><span>' . esc_html__( 'Home', 'iknowledgebase' ) . '</span></a></li>';
+	echo '<nav class="row align-items-center is-size-7 is-hidden-mobile' . esc_attr( $separators_class ) . '" aria-label="breadcrumbs">';
+	echo ' <div class="col-md-3 text-left"><a class="back-link" href="' . esc_url( home_url() ) . '"><span>' . esc_html__( 'Back', 'iknowledgebase' ) . '</span></a></div>';
 	if ( is_category() || is_tag() ) {
 		$object = get_queried_object();
 		if ( ! empty( $object->parent ) ) {
 			$term_id   = $object->parent;
 			$term_link = get_term_link( (int) $term_id, $object->taxonomy );
-			echo '<li><a href="' . esc_url( $term_link ) . '">' . esc_html( get_the_category_by_ID( (int) $term_id ) ) . '</a></li>';
+			echo '<div class="col-md-9 text-left is-active"><a class="current-page" href="' . esc_url( $term_link ) . '">' . esc_html( get_the_category_by_ID( (int) $term_id ) ) . '</a><div class="col-md-3">';
 		}
 		$term_id   = $object->term_id;
 		$term_link = get_term_link( (int) $term_id, $object->taxonomy );
-		echo '<li class="is-active"><a href="' . esc_url( $term_link ) . '"><span>' . esc_html( $object->name ) . '</span></a></li>';
+		echo '<div class="col-md-9 text-left is-active"><a class="current-page" href="' . esc_url( $term_link ) . '"><span>' . esc_html( $object->name ) . '</span></a></div>';
 	} elseif ( is_single() ) {
-		echo '<li>' . get_the_category_list( '</li><li>', 'multiple' );
-		echo '<li class="is-active"><a href="' . esc_url( get_permalink() ) . '" aria-current="page">' . esc_html( get_the_title() ) . '</a> </li>';
+		echo '<div class="col-md-9 text-left is-active">' . get_the_category_list( '<div><div>', 'multiple' );
+		echo '<div class="col-md-9 text-left is-active"><a class="current-page" href="' . esc_url( get_permalink() ) . '" aria-current="page">' . esc_html( get_the_title() ) . '</a> </div>';
 	} else {
-		echo '<li class="is-active"><a aria-current="page">' . esc_html( wp_strip_all_tags( get_the_archive_title() ) ) . '</a></li>';
+		echo '<div class="col-md-9 text-left is-active"><a class="current-page" aria-current="page">' . esc_html( wp_strip_all_tags( get_the_archive_title() ) ) . '</a></div>';
 	}
-	echo '</ul></nav>';
+	echo '</nav>';
 }
 
 

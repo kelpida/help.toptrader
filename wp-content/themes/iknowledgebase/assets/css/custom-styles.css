@@ -33,7 +33,12 @@ a {
 	font-family: 'Girloy';
 	color:#000000;
 }
-
+a:hover {
+	color:#000000;
+}
+body.custom-background {
+    background-color: #ffffff !important;
+}
 .brand-logo {
     max-width: 200px;
     padding: 0;
@@ -41,14 +46,27 @@ a {
 .navbar-end {
 	font-size:14px;
 }
+.menu-item:hover{
+	text-decoration:underline;
+	cursor:pointer;
+	color:#000000;
+}
 
-body.custom-background {
-    background-color: #ffffff !important;
+.categories-section {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	justify-content:space-between;
+	column-gap: 0 !important;
+	min-height:200px;
+	margin:30px 0;
+	max-width: 1050px;
+    margin: 50px auto 0 auto;
+	
 }
 
 .category-box {
 	width: calc((100% - 60px) / 3);
-	margin-right: 20px;
+	margin-right: 0px;
 	margin-bottom: 38px;
 	background:#EEEEEE;
 	border-radius:30px;
@@ -59,24 +77,21 @@ body.custom-background {
 	padding:20px;
 	max-height:123px;
 	max-width:322px;
-	
-	
-}
-.category-box h3 a {
-	color:#000000;
 	font-family: "Girloy Semi-Bold";
+	transition:background-color 0.5s ease;
+}
+.category-box:hover {
+	background:#dddddd !important;
+	cursor:pointer;
 }
 .category-box h3 {
-	font-weight:bold;
+	color:#000000;
+	font-family: "Girloy Semi-Bold";
 	font-size:20px;
 	line-height:24px;
-	max-width:100px;
 	text-align:right;
-	
 }
-.category-box img {
-	height:60px;
-}
+
 .content a, .widget a {
 	text-decoration:none;
 }
@@ -89,9 +104,26 @@ body.custom-background {
 .has-background-grey {
 	background:#eeeeee !important;
 }
+.panel-block {
+	box-shadow:none;
+	border-radius:20px;
+}
+a.panel-block:hover, label.panel-block:hover {
+	background:none !important;
+}
+a.panel-block:hover, label.panel-block:hover h4 {
+	text-decoration:underline;
+	cursor:pointer;
+}
 .panel-block h4 {
-	font-size:16px;
+	font-size:14px;
 	margin:0;
+	font-family: "Girloy Semi-Bold";
+}
+.panel-block p{
+	font-size:12px;
+	margin:0;
+	font-family: "Girloy Medium";
 }
 .title {
 	display:none;
@@ -106,28 +138,18 @@ body.custom-background {
 	border:none !important;
 	outline:none !important;
 }
-.categories-section {
-	display: flex !important;
-	flex-wrap: wrap !important;
-	justify-content:space-between;
-	column-gap: 0 !important;
-	min-height:200px;
-	margin:30px 0;
-	max-width: 1100px;
-  margin: 50px auto 0 auto;
-	
-}
 
-.is-primary.input, .is-primary.textarea {
-		border-radius:5px;
+
+.is-primary.input {
+	border-radius:17px;
 	padding:20px;
-	 box-shadow: none !important;
+	box-shadow: none !important;
 	border:1px solid #42E4C9;
 	height:50px !important;
-	padding:5px !important;
+	padding:5px 20px !important;
 }
 .search-form.is-relative .button.is-primary {
-	border-radius:5px;
+	border-radius:17px;
 	padding:20px;
 	 box-shadow:none !important;
 	border:1px solid #42E4C9;
@@ -135,11 +157,9 @@ body.custom-background {
 	background:#ffffff;
 	color:#000000;
 	height:50px !important;
-	  font-family: "Girloy Medium";
+	font-family: "Girloy Medium";
 }
-.button{
-	  font-family: "Girloy Medium";
-}
+
 .search-form.is-relative .button.is-primary:hover {
 	background:white !important;
 	border-left:none !important;
@@ -149,12 +169,19 @@ body.custom-background {
 	margin-bottom:0 !important;
 	padding-bottom:0 !important;
 }
+#sidebar .content h2 {
+	font-family: "Girloy Semi-Bold";
+	font-size:20px;
+	color:#000000;
+}
 .wp-block-archives li a:before, .wp-block-categories li a:before {
 	content:'';
 	margin:0;
 }
 .wp-block-categories-list li a {
 	color:#000000;
+	font-family: "Girloy Medium";
+	font-size:12px;
 }
 .wp-block-categories-list li a:before {
 	color:#000000;
@@ -162,26 +189,30 @@ body.custom-background {
 .wp-block-categories-list li {
 	font-size:12px;
 	margin:5px 0;
+	padding:9px 15px;
+	transition:background-color 0.5 ease-out;
+}
+.wp-block-categories-list li:hover {
+	background:#dddddd;
+	border-radius:11px;
+
 }
 .wp-block-categories-list li.current-cat {
 	background:#dddddd;
-	padding:5px;
-	border-radius:3px;
+	padding:9px 15px;
+	border-radius:11px;
 }
-.breadcrumb {
-	margin: 20px auto;
-    text-align: center;
-	display:flex;
-	justify-content:center;
+.wp-block-categories-list li.current-cat a{
+	font-family: "Girloy Medium";
 }
-.breadcrumb ul li {
-	
-	display:none !important;
+
+.back-link{
+	font-size:12px;
+	font-family: "Girloy Semi-Bold";
 }
-.breadcrumb ul li.is-active {
-	font-weight:bold;
-	font-size:20px;
-	display:block !important;
+.current-page span {
+	font-family: "Girloy Semi-Bold";
+	font-size:32px;
 }
 .breadcrumb ul li.is-active::before {
 	display:none;
@@ -201,18 +232,24 @@ body.custom-background {
 }
 .chat-blk h6 {
 	color:#ffffff;
-	font-size:24px
+	font-size:24px;
+	margin:0;
+
 }
 .chat-blk p {
 	color:#ffffff;
-	font-size:24px
+	font-size:20px;
+	font-family: "Girloy Medium";
 }
 .button {
 	min-width:127px;
+	font-family: "Girloy Medium";
+	min-height:42px;
+	
 }
 .button.is-info {
 	background:#41EFD2;
-	font-size:16px;
+	font-size:14px;
 	color:#000000;
 	border-radius:15px;
 	padding:10px 20px;
@@ -223,8 +260,13 @@ body.custom-background {
 	cursor:pointer;
 	color:#000000;
 }
+.button.is-info.chat{
+	font-size:20px;
+	min-height:61px;
+	border-radius:18px;
+}
 .button.is-primary {
-	font-size:16px;
+    font-size:14px;
 	color:#ffffff;
 	border-radius:15px;
 	padding:10px 30px 10px 20px;
@@ -233,7 +275,7 @@ body.custom-background {
 	background-position:center right;
 }
 .button.is-primary:hover {
-	background:#7D4ACE;
+	background:#7D4ACE !important;
 	opacity:0.8;
 	cursor:pointer;
 }
@@ -298,6 +340,30 @@ body.custom-background {
 }
 .wp-block-categories-list.wp-block-categories {
 	padding:0;
+}
+article {
+	background:#eeeeee;
+	border-radius:20px;
+	padding:20px;
+}
+article h3 {
+	color:#000000;
+	font-size:20px;
+	font-family: "Girloy Semi-Bold";
+	border-bottom:1px solid #000000;
+	padding-bottom:10px;
+}
+article p {
+	font-size:12px;
+	color:#000000;
+	font-family: "Girloy Medium";
+}
+article .breadcrumb-single-post {
+	font-size:14px;
+	font-family: "Girloy Medium";
+}
+article .breadcrumb-single-post span {
+	font-family: "Girloy Semi-Bold";
 }
 @media screen and (min-width:641px) and (max-width:900px){
 	.categories-section {
