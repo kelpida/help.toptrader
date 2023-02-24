@@ -191,7 +191,7 @@ body.custom-background {
 	border-radius:15px;
 	padding:10px 30px 10px 20px;
 	background:#7D4ACE;
-	background-image:url("wp-content/themes/iknowledgebase/images/button-icon.svg");
+	background-image:url("../images/button-icon.svg");
 	background-position:center right;
 }
 .button.is-primary:hover {
@@ -252,7 +252,7 @@ body.custom-background {
 }
 .icon-search::before {
 	content: '';
-	background-image:url("wp-content/themes/iknowledgebase/images/searchnormal1.svg");
+	background-image:url("../images/searchnormal1.svg");
 	
 }
 .wp-block-categories-list.wp-block-categories {
