@@ -3,6 +3,8 @@
 <head>
     <meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/favicon.png" sizes="32x32">
+	    <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/favicon-16x16.png" sizes="16x16">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
 	

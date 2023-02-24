@@ -276,7 +276,7 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	border-radius:15px;
 	padding:10px 40px 10px 20px;
 	background-color:#7D4ACE;
-	background-image:url("../wp-content/themes/iknowledgebase/images/go-to.svg");
+	background-image:url("/wp-content/themes/iknowledgebase/images/go-to.svg");
 	background-position:90%;
 	background-repeat:no-repeat;
 }
