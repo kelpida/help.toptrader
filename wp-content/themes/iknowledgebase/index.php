@@ -29,18 +29,7 @@ get_header();
 					<?php iknowledgebase_posts_sorter(); ?>
 					</div> -->
 
-					<!-- <?php if ( have_posts() ) : ?>
-						<div class="panel has-background-white">
-						<?php
-
-						// Load posts loop.
-						while ( have_posts() ) {
-							the_post();
-							get_template_part( 'template-parts/content', 'post' );
-						}
-						?>
-						</div>
-						<?php iknowledgebase_the_posts_pagination(); ?><?php endif; ?> -->
+				
 						<div class="categories-section">
 							<a class="category-box" href="category/general-questions/">
 								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.svg">
