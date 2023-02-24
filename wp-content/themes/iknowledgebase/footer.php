@@ -24,7 +24,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col" style="max-width:280px;">
+		<div class="col-md" style="max-width:280px;">
 			<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
 	
 			<div class="copyright">
@@ -38,7 +38,7 @@
 				?>
 			</div>
 		</div>
-		<div class="social col">
+		<div class="social col-md">
 			<p>Social</p>
 			<div class="social-icons">
 				<a href="">
@@ -55,11 +55,13 @@
 				</a>
 			</div>
 		</div>
-		<div class="col justify-content-end">
+		<div class="col-md md-justify-content-end d-flex align-items-center">
 		
-			<img src="<?php bloginfo('template_url'); ?>/images/appstore.svg">
-			<img src="<?php bloginfo('template_url'); ?>/images/googleplay.svg">
-			<img src="<?php bloginfo('template_url'); ?>/images/Vector-1.svg">
+			<img src="<?php bloginfo('template_url'); ?>/images/appstore.svg" style="width:125px">
+			<img src="<?php bloginfo('template_url'); ?>/images/googleplay.svg" style="width:125px;margin:0 10px">
+			<div class="qr">
+			<img src="<?php bloginfo('template_url'); ?>/images/qr_code.svg">
+			</div>
 		</div>
 
 
