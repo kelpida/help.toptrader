@@ -425,6 +425,36 @@ article .breadcrumb-single-post span {
 	background-color:#7D4ACE;
 	margin:0 2px;
 }
+#was-this-helpful {
+	position: absolute;
+	right: 30px;
+	background: transparent;
+    font-size:14px;
+	font-family: "Girloy Medium";
+	padding:0;
+	bottom:20px;
+}
+#wthf-yes-no span {
+    padding: 0.4em 0.8em;
+    border-radius: 0.2em;
+    background-color: rgba(255,255,255,0.9);
+    color: #000000;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-box-shadow: 0 0 6px 0px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 0 6px 0px rgba(0,0,0,0.1);
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 10px;
+	font-family: "Girloy Medium";
+}
+#was-this-helpful.wthf-disabled {
+    pointer-events: none;
+    position: absolute;
+    right: 30px;
+    text-align: right;
+}
 @media screen and (min-width:641px) and (max-width:900px){
 	.categories-section {
 		justify-content: center;
