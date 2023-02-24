@@ -12,7 +12,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-3">
+		<div class="col">
 			<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
 	
 			<div class="copyright">
@@ -26,8 +26,19 @@
 				?>
 			</div>
 		</div>
-		<div class="social col-9">
+		<div class="social col">
 			<p>Social</p>
+			<div class="social-icons">
+				<img src="<?php bloginfo('template_url'); ?>/images/facebook.svg">
+				<img src="<?php bloginfo('template_url'); ?>/images/instagram.svg">
+				<img src="<?php bloginfo('template_url'); ?>/images/twitter.svg">
+				<img src="<?php bloginfo('template_url'); ?>/images/linkedin.svg">
+			</div>
+		</div>
+		<div class="col justify-content-end">
+			<img src="<?php bloginfo('template_url'); ?>/images/appstore.svg">
+			<img src="<?php bloginfo('template_url'); ?>/images/googleplay.svg">
+			<img src="<?php bloginfo('template_url'); ?>/images/Vector-1.svg">
 		</div>
 
 

@@ -186,11 +186,13 @@ body.custom-background {
 	color:#000000;
 }
 .button.is-primary {
-		font-size:16px;
+	font-size:16px;
 	color:#ffffff;
 	border-radius:15px;
-	padding:10px 20px;
+	padding:10px 30px 10px 20px;
 	background:#7D4ACE;
+	background-image:url("<?php bloginfo('template_url'); ?>/images/button-icon.svg");
+	background-position:center right;
 }
 .button.is-primary:hover {
 	background:#7D4ACE;
@@ -236,6 +238,13 @@ body.custom-background {
 	max-width:1051px;
 	margin:0 auto;
 	text-align:center;
+}
+.social-icons{
+	display:flex;
+	align-items:center;
+}
+.social-icons img {
+	margin:0 10px;
 }
 .icon.is-small .icon-search {
 	color:#333333;
