@@ -12,7 +12,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col">
+		<div class="col" style="max-width:280px;">
 			<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
 	
 			<div class="copyright">

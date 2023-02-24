@@ -191,7 +191,7 @@ body.custom-background {
 	border-radius:15px;
 	padding:10px 30px 10px 20px;
 	background:#7D4ACE;
-	background-image:url("<?php bloginfo('template_url'); ?>/images/button-icon.svg");
+	background-image:url("wp-content/themes/iknowledgebase/images/button-icon.svg");
 	background-position:center right;
 }
 .button.is-primary:hover {
@@ -244,10 +244,16 @@ body.custom-background {
 	align-items:center;
 }
 .social-icons img {
-	margin:0 10px;
+	margin:0 10px 0 0;
 }
+
 .icon.is-small .icon-search {
 	color:#333333;
+}
+.icon-search::before {
+	content: '';
+	background-image:url("wp-content/themes/iknowledgebase/images/searchnormal1.svg");
+	
 }
 .wp-block-categories-list.wp-block-categories {
 	padding:0;
