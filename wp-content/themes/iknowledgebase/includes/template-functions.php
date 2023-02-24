@@ -271,7 +271,9 @@ function iknowledgebase_breadcrumbs() {
 	echo '</nav>';
 }
 
-
+function iknowledgebase_category() {
+	echo get_the_category_list( '', 'multiple' );
+}
 // Customizer Sidebar location
 function iknowledgebase_sidebar_location() {
 	$option = get_theme_mod( 'iknowledgebase_sidebar_location', 'left' );

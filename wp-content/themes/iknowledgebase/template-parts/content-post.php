@@ -18,7 +18,7 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
         <div class="content">
 			<div class="breadcrumb-single-post">
 				<img src="<?php bloginfo('template_url'); ?>/images/book.svg"/>
-				<p>Articles on <span><?php the_archive_title(); ?></span></p>
+				<p>Articles on <span></span></p>
 			</div>
 			<h3><?php the_title(); ?></h3>
 			<?php the_content(); ?>

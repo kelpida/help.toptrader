@@ -398,7 +398,33 @@ article .breadcrumb-single-post p {
 article .breadcrumb-single-post span {
 	font-family: "Girloy Semi-Bold";
 }
-
+.content-list-small-desc {
+	padding:15px;
+}
+.content-list-small-desc {
+	display:flex;
+	justify-content: space-between;
+}
+.content-list-small-desc p {
+	max-width:600px;
+}
+.content-list-featured {
+	font-family: "Girloy Semi-Bold";
+	font-size:12px;
+	padding:0 !important;
+	margin-bottom:5px;
+}
+.featured-icons {
+	display:flex;
+	justify-content:space-between;
+}
+.featured-icons .circle {
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background-color:#7D4ACE;
+	margin:0 2px;
+}
 @media screen and (min-width:641px) and (max-width:900px){
 	.categories-section {
 		justify-content: center;
