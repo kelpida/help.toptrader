@@ -246,7 +246,10 @@ body.custom-background {
 .social-icons img {
 	margin:0 10px 0 0;
 }
-
+.social-icons a img:hover{
+	cursor:pointer;
+	opacity:0.6;
+}
 .icon.is-small .icon-search {
 	color:#333333;
 }

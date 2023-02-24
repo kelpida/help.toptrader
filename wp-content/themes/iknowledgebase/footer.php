@@ -29,13 +29,22 @@
 		<div class="social col">
 			<p>Social</p>
 			<div class="social-icons">
-				<img src="<?php bloginfo('template_url'); ?>/images/facebook.svg">
-				<img src="<?php bloginfo('template_url'); ?>/images/instagram.svg">
-				<img src="<?php bloginfo('template_url'); ?>/images/twitter.svg">
-				<img src="<?php bloginfo('template_url'); ?>/images/linkedin.svg">
+				<a href="">
+					<img src="<?php bloginfo('template_url'); ?>/images/facebook.svg">
+				</a>
+				<a href="">
+					<img src="<?php bloginfo('template_url'); ?>/images/instagram.svg">
+				</a>
+				<a href="">
+					<img src="<?php bloginfo('template_url'); ?>/images/twitter.svg">
+				</a>
+				<a href="">
+					<img src="<?php bloginfo('template_url'); ?>/images/linkedin.svg">
+				</a>
 			</div>
 		</div>
 		<div class="col justify-content-end">
+		
 			<img src="<?php bloginfo('template_url'); ?>/images/appstore.svg">
 			<img src="<?php bloginfo('template_url'); ?>/images/googleplay.svg">
 			<img src="<?php bloginfo('template_url'); ?>/images/Vector-1.svg">
@@ -48,7 +57,7 @@
 <div class="footer-text container">
 	<div class="row justify-content-md-center">
 		
-		<div class="col-7">
+		<div class="col-xl-7">
 			<div class="navbar is-transparent">
 				<div id="main-menu" class="navbar-menu is-active">
 					<div class="navbar">
