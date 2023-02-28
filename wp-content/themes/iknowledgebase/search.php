@@ -22,7 +22,7 @@ get_header();
                 </div>
 
 				<?php if ( have_posts() ) : ?>
-                    <div class="panel has-background-grey">
+                    <div class="panel has-background-grey search-page" style="padding:0">
 						<?php
 
 						// Load posts loop.
