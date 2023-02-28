@@ -21,7 +21,7 @@ $post_icon = apply_filters( 'iknowledgebase_post_icon', 'icon-book' );
 <div class="content-list-small-desc">
 	<p>
 		<?php
-		echo wp_trim_words( get_the_content(), 40, '...' );
+		echo wp_trim_words( get_the_content(), 20, '...' );
 		?>
 	</p>
 	<?php $ns_featured = get_post_meta( $id, '_is_ns_featured_post', true ); ?>
