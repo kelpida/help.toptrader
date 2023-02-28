@@ -352,6 +352,7 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	padding:10px;
 	background: #EBEBEB;
 	border-radius: 14px 14px 0px 0px;
+	z-index:99;
 }
 .footer-bottom-note p {
 	font-size:10px;
