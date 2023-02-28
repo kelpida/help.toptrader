@@ -22,7 +22,7 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
 			<div class="row">
 				<div class="col-md-3"><?php get_sidebar(); ?></div>
 				<div class="col-md-9"><?php if ( have_posts() ) : ?>
-                        <div class="panel has-background-grey">
+                        
 							<?php
 							iknowledgebase_get_sticky_posts_in_category();
 							// Load posts loop.
@@ -31,7 +31,7 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
 								get_template_part( 'template-parts/content', 'list' );
 							}
 							?>
-                        </div>
+							
 						<?php iknowledgebase_the_posts_pagination(); ?><?php endif; ?></div>
 			</div>
 
