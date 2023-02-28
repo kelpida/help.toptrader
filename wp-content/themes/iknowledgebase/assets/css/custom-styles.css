@@ -422,14 +422,14 @@ article .breadcrumb-single-post span {
 	font-family: "Girloy Semi-Bold";
 }
 .content-list-small-desc {
-	padding:15px;
+	padding:0 15px;
 }
 .content-list-small-desc {
 	display:flex;
 	justify-content: space-between;
 }
 .content-list-small-desc p {
-	max-width:600px;
+	max-width:800px;
 }
 .content-list-featured {
 	font-family: "Girloy Semi-Bold";

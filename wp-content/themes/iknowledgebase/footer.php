@@ -41,16 +41,16 @@
 		<div class="social col-md">
 			<p>Social</p>
 			<div class="social-icons">
-				<a href="">
+				<a href="https://www.facebook.com/TopTraderEu" target="_blank">
 					<img src="<?php bloginfo('template_url'); ?>/images/facebook.svg">
 				</a>
-				<a href="">
+				<a href="https://www.instagram.com/toptradereurope/" target="_blank">
 					<img src="<?php bloginfo('template_url'); ?>/images/instagram.svg">
 				</a>
-				<a href="">
+				<a href="https://twitter.com/TopTraderEurope" target="_blank">
 					<img src="<?php bloginfo('template_url'); ?>/images/twitter.svg">
 				</a>
-				<a href="">
+				<a href="https://www.linkedin.com/company/toptrader-europe/" target="_blank">
 					<img src="<?php bloginfo('template_url'); ?>/images/linkedin.svg">
 				</a>
 			</div>
