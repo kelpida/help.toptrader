@@ -146,7 +146,7 @@ a.panel-block:hover, label.panel-block:hover h4 {
 .level-item p {
 	font-size:20px;
 	font-family: "Girloy Medium";
-	margin:0 10px 0 0 ;
+	margin:12px 10px 0 0 ;
 }
 .title {
 	display:none;
@@ -430,12 +430,17 @@ article .breadcrumb-single-post span {
 }
 .content-list-small-desc p {
 	max-width:800px;
+	margin:0;
 }
 .content-list-featured {
 	font-family: "Girloy Semi-Bold";
 	font-size:12px;
 	padding:0 !important;
 	margin-bottom:5px;
+}
+.search-page .has-background-grey {
+	margin:0;
+	padding-bottom:0 !important;
 }
 .featured-icons {
 	display:flex;
