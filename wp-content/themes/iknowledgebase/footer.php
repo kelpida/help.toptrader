@@ -24,8 +24,8 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md" style="max-width:280px;">
-			<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
+		<div class="col-md" style="max-width:220px;">
+			<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu" width="150">
 	
 			<div class="copyright">
 				<?php

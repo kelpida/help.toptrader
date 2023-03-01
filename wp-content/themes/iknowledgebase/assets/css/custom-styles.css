@@ -36,6 +36,11 @@ a {
 a:hover {
 	color:#000000;
 }
+@media screen and (min-width: 1408px) {
+	.container:not(.is-max-desktop):not(.is-max-widescreen) {
+		max-width: 1050px;
+	}
+}
 body.custom-background {
     background-color: #ffffff !important;
 }
@@ -48,6 +53,7 @@ body.custom-background {
 }
 .navbar-brand {
 	margin-right:0;
+	padding-left:15px;
 }
 .menu-item:hover{
 	text-decoration:underline;
@@ -61,7 +67,6 @@ body.custom-background {
 	justify-content:space-between;
 	column-gap: 0 !important;
 	min-height:200px;
-	margin:30px 0;
 	max-width: 1050px;
     margin: 50px auto 0 auto;
 	
@@ -260,7 +265,6 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	justify-content:space-between;
 	align-items:center;
 	max-width:1050px !important;
-	padding:0 !important;
 }
 .chat-blk h6 {
 	color:#ffffff;
@@ -512,13 +516,19 @@ article .breadcrumb-single-post span {
     right: 30px;
     text-align: right;
 }
-@media screen and (min-width:641px) and (max-width:900px){
-	.categories-section {
-		justify-content: center;
-	}
+@media screen and (min-width:720px) and (max-width:900px){
 	.category-box {
 		width:50%;
 	
+	}
+}
+@media screen and (max-width:719px) {
+	.category-box {
+		width: 322px;
+		margin:38px auto 0 auto;
+	}
+	.categories-section {
+		margin:0 auto;
 	}
 }
 @media screen and (max-width:991px){ 
