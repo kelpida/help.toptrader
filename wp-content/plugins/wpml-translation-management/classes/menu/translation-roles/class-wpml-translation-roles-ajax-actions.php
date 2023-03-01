@@ -39,7 +39,9 @@ abstract class WPML_Translation_Roles_Ajax extends WPML_TM_AJAX implements IWPML
 	public function remove_translation_role() {
 		if ( $this->is_valid_request( $this->get_nonce() ) && $user = $this->get_user() ) {
 			$user->remove_cap( $this->get_capability() );
+			$this->on_remove_role( $user );
 			do_action( 'wpml_tm_ate_synchronize_' . $this->get_role() . 's' );
+			do_action( 'wpml_tm_remove_translation_role', $user, $this->get_capability() );
 			wp_send_json_success();
 		} else {
 			wp_send_json_error( __( 'Could not find user!', 'wpml-translation-management' ) );
@@ -63,16 +65,17 @@ abstract class WPML_Translation_Roles_Ajax extends WPML_TM_AJAX implements IWPML
 				$this->on_user_created( $user );
 
 				$user->data->edit_link = esc_url( "user-edit.php?user_id={$user->ID}" );
-				$user->data->avatar = get_avatar( $user->ID );
+				$user->data->avatar    = get_avatar( $user->ID );
 
 				$new_row = $this->view->show(
 					array(
-						'user' => (array) $user->data
+						'user' => (array) $user->data,
 					),
 					$this->get_user_row_template()
 				);
 
 				do_action( 'wpml_tm_ate_synchronize_' . $this->get_role() . 's' );
+				do_action( 'wpml_tm_add_translation_role', $user, $this->get_capability() );
 
 				if ( $this->post_vars->post( 'sendEmail', FILTER_VALIDATE_BOOLEAN ) ) {
 					$this->send_instructions_to_user( $user );
@@ -114,7 +117,9 @@ abstract class WPML_Translation_Roles_Ajax extends WPML_TM_AJAX implements IWPML
 		$last_name  = $this->post_vars->post( 'last' );
 		$email      = $this->post_vars->post( 'email', FILTER_SANITIZE_EMAIL );
 		$user_name  = $this->post_vars->post( 'user' );
-		$role       = $this->post_vars->post( 'role' );
+		$role       = \WPML\TM\Menu\TranslationRoles\RoleValidator::getTheHighestPossibleIfNotValid(
+			$this->post_vars->post( 'role' )
+		);
 
 		if ( $email && $user_name && $role ) {
 			$user_id = wp_insert_user(
@@ -145,5 +150,6 @@ abstract class WPML_Translation_Roles_Ajax extends WPML_TM_AJAX implements IWPML
 	abstract public function get_capability();
 	abstract public function get_user_row_template();
 	abstract public function on_user_created( WP_User $user );
+	abstract public function on_remove_role( WP_User $user );
 	abstract public function send_instructions_to_user( WP_User $user );
 }

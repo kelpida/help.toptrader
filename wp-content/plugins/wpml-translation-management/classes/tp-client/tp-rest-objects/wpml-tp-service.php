@@ -15,6 +15,9 @@ class WPML_TP_Service extends WPML_TP_REST_Object implements Serializable {
 	 */
 	public $logo_url;
 
+	/** @var string */
+	public $logo_preview_url;
+
 	/**
 	 * @var string
 	 */
@@ -121,6 +124,12 @@ class WPML_TP_Service extends WPML_TP_REST_Object implements Serializable {
 	/** @var string */
 	public $client_create_account_page_url;
 
+	/** bool */
+	public $redirect_to_ts;
+
+	/** @var \stdClass[] */
+	public $countries = [];
+
 	public function __construct( stdClass $object = null ) {
 		parent::__construct( $object );
 		$this->set_custom_fields_data();
@@ -139,6 +148,10 @@ class WPML_TP_Service extends WPML_TP_REST_Object implements Serializable {
 	 */
 	public function get_logo_url() {
 		return $this->logo_url;
+	}
+
+	public function get_logo_preview_url() {
+		return $this->logo_preview_url;
 	}
 
 	/**
@@ -261,6 +274,13 @@ class WPML_TP_Service extends WPML_TP_REST_Object implements Serializable {
 	}
 
 	/**
+	 * @param  string $logo_preview_url
+	 */
+	public function set_logo_preview_url( $logo_preview_url ) {
+		$this->logo_preview_url = $logo_preview_url;
+	}
+
+	/**
 	 * @param string $url
 	 */
 	public function set_url( $url ) {
@@ -332,7 +352,7 @@ class WPML_TP_Service extends WPML_TP_REST_Object implements Serializable {
 	/**
 	 * @param bool $value
 	 */
-	public function set_has_language_pairs( $value  ) {
+	public function set_has_language_pairs( $value ) {
 		$this->has_language_pairs = (bool) $value;
 	}
 
@@ -614,6 +634,35 @@ class WPML_TP_Service extends WPML_TP_REST_Object implements Serializable {
 		$this->client_create_account_page_url = $url;
 	}
 
+	/**
+	 * @return mixed
+	 */
+	public function get_redirect_to_ts() {
+		return $this->redirect_to_ts;
+	}
+
+	/**
+	 * @param mixed $redirect_to_ts
+	 */
+	public function set_redirect_to_ts( $redirect_to_ts ) {
+		$this->redirect_to_ts = $redirect_to_ts;
+	}
+
+	/**
+	 * @return stdClass[]
+	 */
+	public function get_countries() {
+		return $this->countries;
+	}
+
+	/**
+	 * @param  stdClass[] $countries
+	 */
+	public function set_countries( array $countries ) {
+		$this->countries = $countries;
+	}
+
+
 	public function serialize() {
 		return serialize( get_object_vars( $this ) );
 	}
@@ -632,9 +681,10 @@ class WPML_TP_Service extends WPML_TP_REST_Object implements Serializable {
 	 * @return array
 	 */
 	protected function get_properties() {
-		return array(
+		return [
 			'id'                             => 'id',
 			'logo_url'                       => 'logo_url',
+			'logo_preview_url'               => 'logo_preview_url',
 			'url'                            => 'url',
 			'name'                           => 'name',
 			'description'                    => 'description',
@@ -668,7 +718,8 @@ class WPML_TP_Service extends WPML_TP_REST_Object implements Serializable {
 			'how_to_get_credentials_desc'    => 'how_to_get_credentials_desc',
 			'how_to_get_credentials_url'     => 'how_to_get_credentials_url',
 			'client_create_account_page_url' => 'client_create_account_page_url',
-
-		);
+			'redirect_to_ts?'                => 'redirect_to_ts',
+			'countries'                      => 'countries',
+		];
 	}
 }

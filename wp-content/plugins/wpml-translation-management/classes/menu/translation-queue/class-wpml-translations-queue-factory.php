@@ -1,9 +1,15 @@
 <?php
 
+use function WPML\Container\make;
+use WPML\TM\Menu\TranslationQueue\CloneJobs;
+
 /**
  * @author OnTheGo Systems
  */
 class WPML_Translations_Queue_Factory {
+	/**
+	 * @return \WPML_Translations_Queue|null
+	 */
 	public function create() {
 		global $sitepress;
 
@@ -12,11 +18,15 @@ class WPML_Translations_Queue_Factory {
 		}
 
 		if ( ! class_exists( 'WP_List_Table' ) ) {
-			require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
+			require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
 		}
 
 		$screen_options_factory = new WPML_UI_Screen_Options_Factory( $sitepress );
 
-		return new WPML_Translations_Queue( $sitepress, $screen_options_factory );
+		return new WPML_Translations_Queue(
+			$sitepress,
+			$screen_options_factory,
+			make( CloneJobs::class )
+		);
 	}
 }

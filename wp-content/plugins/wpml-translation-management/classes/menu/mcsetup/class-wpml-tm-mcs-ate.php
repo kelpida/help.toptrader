@@ -1,5 +1,7 @@
 <?php
 
+use WPML\TM\ATE\ClonedSites\Lock;
+
 /**
  * @author OnTheGo Systems
  */
@@ -35,20 +37,28 @@ class WPML_TM_MCS_ATE extends WPML_Twig_Template_Loader {
 		WPML_TM_ATE_AMS_Endpoints $endpoints,
 		WPML_TM_MCS_ATE_Strings $strings
 	) {
-		parent::__construct( array(
-			                     $this->get_template_path(),
-		                     ) );
+		parent::__construct(
+			array(
+				$this->get_template_path(),
+			)
+		);
 
-		$this->authentication = $authentication;
-		$this->endpoints      = $endpoints;
-		$this->strings        = $strings;
-
+		$this->authentication      = $authentication;
+		$this->endpoints           = $endpoints;
+		$this->strings             = $strings;
 		$this->authentication_data = get_option( WPML_TM_ATE_Authentication::AMS_DATA_KEY, array() );
 
-		$this->model = array(
-			'status_button_text'      => $this->get_status_button_text(),
-			'synchronize_button_text' => $this->strings->get_synchronize_button_text(),
-		);
+		$wpml_support      = esc_html__( 'WPML support', 'wpml-translation-management' );
+		$wpml_support_link = '<a target="_blank" rel="noopener" href="https://wpml.org/forums/forum/english-support/">' . $wpml_support . '</a>';
+
+		$this->model = [
+			'status_button_text'          => $this->get_status_button_text(),
+			'synchronize_button_text'     => $this->strings->get_synchronize_button_text(),
+			'is_ate_communication_locked' => Lock::isLocked(),
+			'strings'                     => [
+				'error_help' => sprintf( esc_html__( 'Please try again in a few minutes. If the problem persists, please contact %s.', 'wpml-translation-management' ), $wpml_support_link ),
+			],
+		];
 	}
 
 	/**
@@ -62,13 +72,22 @@ class WPML_TM_MCS_ATE extends WPML_Twig_Template_Loader {
 		add_action( 'wpml_tm_mcs_' . ICL_TM_TMETHOD_ATE, array( $this, 'render' ) );
 	}
 
-	public function get_model() {
+	/**
+	 * @param array $args
+	 *
+	 * @return array
+	 */
+	public function get_model( array $args = array() ) {
+		if ( array_key_exists( 'wizard', $args ) ) {
+			$this->model['strings']['error_help'] = esc_html__( 'You can continue the Translation Management configuration later by going to WPML -> Settings -> How to translate posts and pages.', 'wpml-translation-management' );
+		}
+
 		return $this->model;
 	}
 
 	public function render() {
 		echo $this->get_template()
-		          ->show( $this->get_model(), 'mcs-ate-controls.twig' );
+				  ->show( $this->get_model(), 'mcs-ate-controls.twig' );
 	}
 
 	public function get_strings() {

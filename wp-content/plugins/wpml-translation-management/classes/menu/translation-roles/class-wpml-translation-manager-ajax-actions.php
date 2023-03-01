@@ -38,6 +38,10 @@ class WPML_Translation_Manager_Ajax extends WPML_Translation_Roles_Ajax {
 
 	}
 
+	public function on_remove_role( WP_User $user ) {
+
+	}
+
 	public function send_instructions_to_user( WP_User $user ) {
 		$site_name             = get_option( 'blogname' );
 		$translation_setup_url = admin_url( 'admin.php?page=' . WPML_TM_FOLDER . '/menu/main.php' );
@@ -67,7 +71,7 @@ class WPML_Translation_Manager_Ajax extends WPML_Translation_Roles_Ajax {
 
 		add_filter( 'wp_mail_from_name', array( $this, 'wp_mail_from_name_filter' ), 10, 1 );
 		wp_mail( $to, $subject, $message, $headers );
-		remove_filter( 'wp_mail_from_name', array( $this, 'wp_mail_from_name_filter' ), 10, 1 );
+		remove_filter( 'wp_mail_from_name', array( $this, 'wp_mail_from_name_filter' ), 10 );
 
 		return true;
 	}

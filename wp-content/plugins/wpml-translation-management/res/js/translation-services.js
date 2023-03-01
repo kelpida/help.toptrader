@@ -5,6 +5,10 @@ var WPMLTranslationServicesDialog = function () {
 
 	var self = this;
 
+	self.INVALIDATION_ACTION = 'translation_service_invalidation';
+	self.AUTHENTICATION_ACTION = 'translation_service_authentication';
+	self.UPDATE_CREDENTIALS_ACTION = 'translation_service_update_credentials';
+
 	self.preventEventDefault = function (event) {
 		if ('undefined' !== event && 'undefined' !== typeof(event.preventDefault)) {
 			event.preventDefault();
@@ -25,13 +29,13 @@ var WPMLTranslationServicesDialog = function () {
 		header = self.activeServiceWrapper.find( '.active-service-header' ).val();
 		tip = self.activeServiceWrapper.find( '.active-service-tip' ).val();
 
-		self.serviceDialog = jQuery('<div id="service_dialog"><h4>' + header + '</h4><div class="custom_fields_wrapper"></div><i>' + tip + '</i><br /><br /><div class="tp_response_message icl_ajx_response"></div>');
+		self.serviceDialog = jQuery('<div id="service_dialog"><h4>' + header + '</h4><div class="custom_fields_wrapper"></div><p class="ts-api-tip">' + tip + '</p><div class="tp_response_message icl_ajx_response"></div>');
 		self.ajaxSpinner.addClass('is-active');
 
 		flushWebsiteDetailsCacheLink = jQuery('.js-flush-website-details-cache');
 
 
-        jQuery('#wpml-tp-services').delegate('.js-activate-service-id', 'click', function (event) {
+        jQuery('#wpml-tp-services').on('click', '.js-activate-service-id', function (event) {
 			self.preventEventDefault(event);
 
             var button = jQuery(this);
@@ -60,7 +64,7 @@ var WPMLTranslationServicesDialog = function () {
 
 			button = jQuery(this);
 			serviceId = jQuery(this).data('id');
-			self.translationServiceAuthentication(serviceId, button, 1);
+			self.translationServiceAuthentication(serviceId, button, self.INVALIDATION_ACTION, 1);
 
 			return false;
 		});
@@ -74,7 +78,7 @@ var WPMLTranslationServicesDialog = function () {
 			return false;
 		});
 
-		self.activeServiceWrapper.on('click', '.js-authenticate-service', function (event) {
+		var credentialSettingHandler = function (event, action) {
 			var customFields;
 			var serviceId;
 			self.preventEventDefault(event);
@@ -82,9 +86,16 @@ var WPMLTranslationServicesDialog = function () {
 			serviceId = jQuery(this).data('id');
 			customFields = jQuery(this).data('custom-fields');
 
-			self.serviceAuthenticationDialog(customFields, serviceId);
+			self.serviceAuthenticationDialog(customFields, serviceId, action);
 
 			return false;
+		};
+		self.activeServiceWrapper.on('click', '.js-authenticate-service', function (event) {
+			return credentialSettingHandler.bind(this)(event, self.AUTHENTICATION_ACTION);
+		});
+
+		self.activeServiceWrapper.on('click', '.js-update-service-credentials', function (event) {
+			return credentialSettingHandler.bind(this)(event, self.UPDATE_CREDENTIALS_ACTION );
 		});
 
 		self.refreshTSInfo();
@@ -169,18 +180,18 @@ var WPMLTranslationServicesDialog = function () {
 	self.disableButton = function (button) {
 		if (button) {
 			button.attr( 'disabled', 'disabled' );
-			button.after( self.ajaxSpinner );
+			button.after( self.ajaxSpinner.clone().addClass('is-active') );
 		}
 	}
 
 	self.enableButton = function (button) {
 		if (button) {
-			button.removeAttr( 'disabled' );
+			button.prop( 'disabled', false );
 			button.next().fadeOut();
 		}
 	}
 
-	self.serviceAuthenticationDialog = function (customFields, serviceId) {
+	self.serviceAuthenticationDialog = function (customFields, serviceId, action) {
 		self.serviceDialog.dialog({
 			dialogClass: 'wpml-dialog otgs-ui-dialog',
 			width:       'auto',
@@ -209,7 +220,7 @@ var WPMLTranslationServicesDialog = function () {
 					text:    "Submit",
 					click:   function () {
 						self.hideButtons();
-						self.translationServiceAuthentication(serviceId, false, 0);
+						self.translationServiceAuthentication(serviceId, false, action, 0);
 					},
 					'class': 'button-primary js-submit'
 				}
@@ -217,7 +228,7 @@ var WPMLTranslationServicesDialog = function () {
 		});
 	};
 
-	self.buildCustomFieldsUI = function( customFields, customFieldsWrapper ) {
+	self.buildCustomFieldsUI = function (customFields, customFieldsWrapper) {
 		var firstInput = false;
 
 		customFieldsWrapper.empty();
@@ -229,21 +240,13 @@ var WPMLTranslationServicesDialog = function () {
 			customFieldsListItem.appendTo(customFieldsWrapper);
 
 			itemId = 'custom_field_' + item.name;
-			if ('hidden' !== item.type) {
+
+			if (item.type.trim().toLowerCase() !== 'hidden') {
 				itemLabel = jQuery('<label for="' + itemId + '">' + item.label + ':</label>');
 				itemLabel.appendTo(customFieldsListItem);
 			}
-			switch (item.type) {
-				case 'text':
-					itemInput = jQuery('<input type="text" id="' + itemId + '" class="custom_fields" name="' + item.name + '" />');
-					break;
-				case 'checkbox':
-					itemInput = jQuery('<input type="checkbox" id="' + itemId + '" class="custom_fields" name="' + item.name + '" />');
-					break;
-				default:
-					itemInput = jQuery('<input type="hidden" id="' + itemId + '" class="custom_fields" name="' + item.name + '" />');
-					break;
-			}
+			itemInput = jQuery('<input type="' + item.type + '" id="' + itemId + '" class="custom_fields" name="' + item.name + '" />');
+
 			itemInput.appendTo(customFieldsListItem);
 			if (!firstInput) {
 				itemInput.focus();
@@ -271,24 +274,14 @@ var WPMLTranslationServicesDialog = function () {
 	};
 
 	self.showButtons = function () {
-		self.serviceDialog.find(self.ajaxSpinner).remove();
-		self.serviceDialog.parent().find('.ui-dialog-buttonpane').fadeIn();
+		if ( self.serviceDialog ) {
+			self.serviceDialog.find( self.ajaxSpinner ).remove();
+			self.serviceDialog.parent().find( '.ui-dialog-buttonpane' ).fadeIn();
+		}
 	};
 
-	self.translationServiceAuthentication = function (serviceId, button, invalidateService, successCallback) {
-		var invalidate;
+	self.translationServiceAuthentication = function (serviceId, button, action, successCallback) {
 		var nonce = jQuery( '.translation_service_authentication' ).val();
-
-		invalidate = invalidateService;
-		if ('undefined' === typeof invalidateService) {
-			invalidate = 0;
-		}
-
-		if (isNaN(serviceId)) {
-			alert('service_id isNAN');
-		} else if (isNaN(invalidate)) {
-			alert('invalidate isNAN');
-		}
 
 		self.disableButton(button);
 
@@ -296,10 +289,9 @@ var WPMLTranslationServicesDialog = function () {
 			type:     "POST",
 			url:      ajaxurl,
 			data:     {
-				'action':        invalidate ? 'translation_service_invalidation' : 'translation_service_authentication',
+				'action':        action,
 				'nonce':         nonce,
 				'service_id':    serviceId,
-				'invalidate':    invalidate,
 				'custom_fields': self.getSerializedCustomFields()
 			},
 			dataType: 'json',
@@ -361,21 +353,21 @@ var WPMLTranslationServicesDialog = function () {
 	};
 };
 
-jQuery(document).ready(function () {
-	"use strict";
+jQuery(function () {
+    "use strict";
 
-	var wpmlTranslationServicesDialog = new WPMLTranslationServicesDialog();
-	var current_url = location.href;
-	var search_section = jQuery( '.ts-admin-section-search' );
+    var wpmlTranslationServicesDialog = new WPMLTranslationServicesDialog();
+    var current_url = WPML_core.sanitize( location.href );
+    var search_section = jQuery('.ts-admin-section-search');
 
-	wpmlTranslationServicesDialog.init();
+    wpmlTranslationServicesDialog.init();
 
-	search_section.find('.search' ).click(function(){
-		var param = {
+    search_section.find('.search').click(function () {
+        var param = {
 			s: search_section.find('.search-string' ).val()
 		};
 
-		window.location.href = current_url + '&' + jQuery.param( param );
+		window.location.href = WPML_core.sanitize( current_url + '&' + jQuery.param( param ) );
 	});
 
 	search_section.find( '.search-string' ).keypress(function (e) {
@@ -391,7 +383,7 @@ jQuery(document).ready(function () {
 				paged: jQuery( this ).val()
 			};
 
-			window.location.href = current_url + '&' + jQuery.param( param );
+			window.location.href = WPML_core.sanitize( current_url + '&' + jQuery.param( param ) );
 		}
 	});
 });
