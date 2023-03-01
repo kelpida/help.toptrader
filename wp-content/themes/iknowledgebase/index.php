@@ -59,9 +59,9 @@ get_header();
 								<img src="<?php bloginfo('template_url'); ?>/images/trading.png">
 								<h3>Trading</h3>
 							</a>
-							<a href="signal-center/" class="category-box">
+							<a href="signal-centre/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/signal-center.svg">
-								<h3>Signal <br/>Center</h3>
+								<h3>Signal <br/>Centre</h3>
 							</a>
 							<a href="finance/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/finance.svg">
