@@ -46,6 +46,9 @@ body.custom-background {
 .navbar-end {
 	font-size:14px;
 }
+.navbar-brand {
+	margin-right:0;
+}
 .menu-item:hover{
 	text-decoration:underline;
 	cursor:pointer;
@@ -257,6 +260,7 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	justify-content:space-between;
 	align-items:center;
 	max-width:1050px !important;
+	padding:0 !important;
 }
 .chat-blk h6 {
 	color:#ffffff;
@@ -523,7 +527,15 @@ article .breadcrumb-single-post span {
 	}
 }
 @media screen and (max-width:640px){
-
+	.chat-blk .container {
+		flex-direction: column;
+	}
+	.chat-blk .container .button {
+		margin-top:10px;
+	}
+	.chat-blk .container .chat-blk-text {
+		text-align:center;
+	}
 	.categories-section {
 		justify-content: center;
 	}
