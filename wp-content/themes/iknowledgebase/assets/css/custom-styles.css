@@ -500,12 +500,11 @@ article .breadcrumb-single-post span {
 }
 #was-this-helpful {
 	position: absolute;
-	right: 30px;
+	margin-top:30px;
 	background: transparent;
     font-size:14px;
 	font-family: "Girloy Medium";
 	padding:0;
-	bottom:20px;
 }
 #wthf-yes-no span {
     padding: 0.4em 0.8em;
