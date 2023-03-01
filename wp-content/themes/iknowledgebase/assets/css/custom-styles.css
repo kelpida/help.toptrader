@@ -58,6 +58,12 @@ body.custom-background {
 .navbar-link:not(.is-arrowless)::after, .select:not(.is-multiple):not(.is-loading)::after {
 	background-image:url('/wp-content/themes/iknowledgebase/images/down-arrow.svg');
 	border:none;
+	width: 11px;
+	height: 6px;
+	border-radius: 0;
+	transform: none;
+	margin-top: -4px;
+	margin-right: 5px;
 }
 .menu-item:hover{
 	text-decoration:underline;
