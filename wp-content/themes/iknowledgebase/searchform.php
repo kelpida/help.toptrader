@@ -14,7 +14,7 @@ $size = (is_single() || is_archive()) ? '' : ' is-medium';
             <label class="screen-reader-text"
                    for="s"><?php esc_html_e( 'Search for:', 'iknowledgebase' ); ?></label>
             <input type="text" value="<?php the_search_query(); ?>" name="s" id="s"
-                   placeholder="<?php esc_attr_e( 'Search?', 'iknowledgebase' ); ?>"
+                   placeholder="<?php esc_attr_e( 'Search', 'iknowledgebase' ); ?>"
                    class="input live-search is-primary<?php echo esc_attr($size);?>" autocomplete="off"/>
         </div>
         <div class="control">
