@@ -53,7 +53,7 @@ get_header();
 							</a>
 							<a href="platforms/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/platforms.svg">
-								<h3>Platfroms</h3>
+								<h3>Platforms</h3>
 							</a>
 							<a href="trading/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/trading.png">
