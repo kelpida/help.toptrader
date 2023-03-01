@@ -47,9 +47,9 @@ get_header();
 								<img src="<?php bloginfo('template_url'); ?>/images/verification.svg">
 								<h3>Verification</h3>
 							</a>
-							<a href="deposits-and-withdraws/" class="category-box">
+							<a href="deposits-and-withdrawals/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/deposit.png">
-								<h3>Deposits & <br/>Withdraws</h3>
+								<h3>Deposits & <br/>Withdrawals</h3>
 							</a>
 							<a href="platforms/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/platforms.svg">
