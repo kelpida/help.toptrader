@@ -55,6 +55,10 @@ body.custom-background {
 	margin-right:0;
 	padding-left:15px;
 }
+.navbar-link:not(.is-arrowless)::after, .select:not(.is-multiple):not(.is-loading)::after {
+	background-image:url('/wp-content/themes/iknowledgebase/images/down-arrow.svg');
+	border:none;
+}
 .menu-item:hover{
 	text-decoration:underline;
 	cursor:pointer;
