@@ -91,7 +91,9 @@ body.custom-background {
 	line-height:24px;
 	text-align:right;
 }
-
+.content h3 {
+	color:#000000;
+}
 .content a, .widget a {
 	text-decoration:none;
 }

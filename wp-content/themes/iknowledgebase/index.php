@@ -39,7 +39,7 @@ get_header();
 								<img src="<?php bloginfo('template_url'); ?>/images/registration.svg">
 								<h3>Registration</h3>
 							</a>
-							<a href="registration/" class="category-box">
+							<a href="acccounts/" class="category-box">
 								<img src="<?php bloginfo('template_url'); ?>/images/accounts.svg">
 								<h3>Accounts</h3>
 							</a>

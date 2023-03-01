@@ -28,7 +28,7 @@
          aria-label="<?php esc_attr_e( 'Main Navigation', 'iknowledgebase' ); ?>">
         <div class="container">
             <div class="navbar-brand">
-				<a href="<?php esc_url( home_url() ); ?>">
+				<a href="<?php echo get_home_url(); ?>">
 					<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
 				</a>
 				<!-- <?php iknowledgebase_brand(); ?> -->
