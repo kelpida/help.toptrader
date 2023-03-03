@@ -13,7 +13,7 @@
 						<h6>Not finding what you are looking for?</h6>
 						<p>Chat with us or send us an email</p>
 					</div>
-					<div class="button is-info chat">
+					<div class="button is-info chat" id="chatWithUs" onclick="ConvrsChat.ShowChannels()">
 						Chat with us
 						<img src="<?php bloginfo('template_url'); ?>/images/messages3.svg">
 					</div>
