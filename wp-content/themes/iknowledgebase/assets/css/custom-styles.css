@@ -90,7 +90,7 @@ body.custom-background {
 	padding-left:15px;
 	padding-right:15px;
 }
-.navbar .menu-item::after {
+.navbar .menu-item::after,.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
 	background-image:url('/wp-content/themes/iknowledgebase/images/down-arrow.svg');
 	border:none;
 	width: 11px;
@@ -99,6 +99,27 @@ body.custom-background {
 	transform: none;
 	margin-top: -4px;
 	margin-right: 5px;
+}
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
+	top:50%;
+}
+.js-wpml-ls-item-toggle.wpml-ls-item-toggle {
+	float: right;
+}
+.wpml-ls-legacy-dropdown-click a span {
+	font-family: 'Girloy';
+	font-size:14px;
+}
+.wpml-ls-legacy-dropdown-click a {
+	display: block;
+	text-decoration: none;
+	color: #333333;
+	background-color: #fff;
+	padding: 5px 10px;
+	line-height: 1;
+	font-size: 14px;
+	width: fit-content;
+	border: none;
 }
 .menu-item:hover{
 	text-decoration:underline;
