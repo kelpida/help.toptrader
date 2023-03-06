@@ -92,7 +92,7 @@ body.custom-background {
 	align-items:center;
 	text-align:center;
 	justify-content:space-between;
-	padding:26px 40px 26px 20px;
+	padding:26px 40px 26px 30px;
 	max-height:123px;
 	max-width:322px;
 	font-family: "Girloy Semi-Bold";
@@ -191,6 +191,9 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	height:50px !important;
 	padding:5px 20px !important;
 }
+.is-primary.input:hover {
+	border-right:none !important;
+}
 .search-form.is-relative .button.is-primary {
 	border-radius:17px;
 	padding:20px;
@@ -206,8 +209,9 @@ a.panel-block:hover, label.panel-block:hover h4 {
 
 .search-form.is-relative .button.is-primary:hover {
 	background:white !important;
-	border-left:none !important;
 	border:1px solid #42E4C9 !important;
+	border-left:none !important;
+
 }
 #sidebar .widget.widget_block.content.box {
 	margin-bottom:0 !important;
