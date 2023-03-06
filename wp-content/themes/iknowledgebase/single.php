@@ -23,7 +23,7 @@ $sidebar_hide = !empty($iknowledgebase_settings['post_hide_sidebar']) ? ' is-hid
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-3 d-sm-none d-md-block"><?php get_sidebar(); ?></div>
+			<div class="col-md-3 d-none d-md-block"><?php get_sidebar(); ?></div>
 			<div class="col-md-9"><?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'template-parts/content', 'post' ); ?>
 				<?php

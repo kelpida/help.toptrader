@@ -51,6 +51,7 @@ body.custom-background {
 .navbar-burger {
 	width:18px;
 	height:15px;
+	top:7px;
 }
 .navbar-burger:hover {
 	background: none;
@@ -104,7 +105,11 @@ body.custom-background {
 	cursor:pointer;
 	color:#000000;
 }
-
+@media screen and (max-width:991px) {
+	.navbar-item.has-dropdown.is-hoverable {
+		display: none;
+	}
+}
 .categories-section {
 	display: flex !important;
 	flex-wrap: wrap !important;
@@ -544,7 +549,7 @@ article .breadcrumb-single-post span {
 	COLOR:#ffffff !important;
 }
 .convrs-chat-mainicon{
-	bottom:45px;
+	bottom:50px;
 }
 #was-this-helpful {
 	position: absolute;

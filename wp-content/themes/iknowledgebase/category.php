@@ -20,7 +20,7 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
 			 </div>
 			</div>
 			<div class="row">
-				<div class="col-md-3 d-sm-none d-md-block"><?php get_sidebar(); ?></div>
+				<div class="col-md-3 d-none d-md-block"><?php get_sidebar(); ?></div>
 				<div class="col-md-9"><?php if ( have_posts() ) : ?>
                         
 							<?php
