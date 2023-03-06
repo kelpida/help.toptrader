@@ -42,7 +42,6 @@
                 </a>
             </div>
             <div id="main-menu" class="navbar-menu" <?php iknowledgebase_amp_menu_is_toggled(); ?>>
-                <?php do_action('wpml_add_language_selector');?>
                 <div class="navbar-start">
 					<?php
 					wp_nav_menu( array(
