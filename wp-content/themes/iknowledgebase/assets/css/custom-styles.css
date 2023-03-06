@@ -100,13 +100,20 @@ body.custom-background {
 	margin-top: -4px;
 	margin-right: 5px;
 }
-.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
-	top:50%;
-	border:none !important;
-}
-.js-wpml-ls-item-toggle.wpml-ls-item-toggle {
+
+.wpml-ls-legacy-dropdown-click {
+	width: fit-content !important;
+	max-width: 100%;
 	float: right;
 }
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
+	top:50% !important;
+	border:none !important;
+}
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+	border:none !important;
+}
+
 .wpml-ls-legacy-dropdown-click a span {
 	font-family: 'Girloy';
 	font-size:14px;
@@ -119,17 +126,22 @@ body.custom-background {
 	padding: 5px 10px;
 	line-height: 1;
 	font-size: 14px;
-	width: fit-content;
 	border: none;
 }
 .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
 	font-size: 14px;
-	width: fit-content;
+	left:auto !important;
 }
 .wpml-ls-legacy-dropdown-click a {
 	font-size: 14px;
 	color:#333333;
 	border:none;
+	top: 24px !important;
+	right: 16px !important;
+	border-top: none !important;
+}
+.wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover>a, .wpml-ls-legacy-dropdown-click a:focus, .wpml-ls-legacy-dropdown-click a:hover {
+	background: none !important;
 }
 .menu-item:hover{
 	text-decoration:underline;
