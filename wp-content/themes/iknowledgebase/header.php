@@ -32,7 +32,7 @@
 					<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
 				</a>
 				<!-- <?php iknowledgebase_brand(); ?> -->
-                <div class="d-md-none">
+                <div class="d-lg-none">
 	            <?php do_action('wpml_add_language_selector');?>
                 </div>
                 <a href="#" role="button" class="navbar-burger burger" id="navigation-burger"
