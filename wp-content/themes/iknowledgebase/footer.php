@@ -55,7 +55,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="col-md justify-content-end d-flex align-items-center">
+		<div class="col-md justify-content-lg-end d-flex align-items-center">
 		
 			<img src="<?php bloginfo('template_url'); ?>/images/appstore.svg" style="width:125px">
 			<img src="<?php bloginfo('template_url'); ?>/images/googleplay.svg" style="width:125px;margin:0 10px">

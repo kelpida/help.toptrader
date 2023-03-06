@@ -48,12 +48,46 @@ body.custom-background {
     max-width: 200px;
     padding: 0;
 }
+.navbar-burger {
+	width:18px;
+	height:15px;
+}
+.navbar-burger:hover {
+	background: none;
+}
+.navbar-burger span {
+	width:18px;
+	height:2px;
+	border-radius: 2px;
+}
+.navbar-burger span:nth-child(1) {
+	top: calc(50% - 6px);
+}
+.navbar-burger span:nth-child(2) {
+	top: calc(50% - 2px);
+}
+.navbar-burger span:nth-child(3) {
+	top: calc(50% + 2px);
+}
+.navbar-burger span:nth-child(4) {
+	top: calc(50% + 6px);
+}
+
+.navbar-burger.is-active span:nth-child(3) {
+	-webkit-transform: translateY(-3px) rotate(-45deg);
+	transform: translateY(-3px) rotate(-45deg);
+}
+
+.navbar-burger.is-active span:nth-child(4) {
+	opacity: 0;
+}
 .navbar-end {
 	font-size:14px;
 }
 .navbar-brand {
 	margin-right:0;
 	padding-left:15px;
+	padding-right:15px;
 }
 .navbar .menu-item::after {
 	background-image:url('/wp-content/themes/iknowledgebase/images/down-arrow.svg');
@@ -185,7 +219,7 @@ a.panel-block:hover, label.panel-block:hover h4 {
 
 .is-primary.input {
 	border-radius:17px;
-	padding:20px;
+	border-right:none !important;
 	box-shadow: none !important;
 	border:1px solid #42E4C9;
 	height:50px !important;
@@ -207,7 +241,7 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	font-family: "Girloy Medium";
 }
 
-.search-form.is-relative .button.is-primary:hover {
+.search-form.is-relative .button.is-primary:hover,.search-form.is-relative .button.is-primary:focus {
 	background:white !important;
 	border:1px solid #42E4C9 !important;
 	border-left:none !important;
@@ -369,6 +403,12 @@ a.panel-block:hover, label.panel-block:hover h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+@media screen and (max-width:641px){
+	.footer .qr {
+		display: none;
+	}
 }
 .footer-bottom-note {
 	position: fixed;
@@ -502,6 +542,9 @@ article .breadcrumb-single-post span {
 }
 .page-numbers.dots {
 	COLOR:#ffffff !important;
+}
+.convrs-chat-mainicon{
+	bottom:45px;
 }
 #was-this-helpful {
 	position: absolute;

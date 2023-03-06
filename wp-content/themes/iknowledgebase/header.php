@@ -24,7 +24,7 @@
 	
 
 	
-    <nav class="navbar <?php echo esc_attr( $iknowledgebase_menu_classes ); ?>" role="navigation"
+    <nav class="navbar fixed-top <?php echo esc_attr( $iknowledgebase_menu_classes ); ?>" role="navigation"
          aria-label="<?php esc_attr_e( 'Main Navigation', 'iknowledgebase' ); ?>">
         <div class="container">
             <div class="navbar-brand">
@@ -35,6 +35,7 @@
                 <a href="#" role="button" class="navbar-burger burger" id="navigation-burger"
                    aria-label="<?php esc_attr_e( 'Menu', 'iknowledgebase' ); ?>" aria-expanded="false"
                    data-target="main-menu" <?php iknowledgebase_amp_menu_toggle(); ?>>
+                    <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -78,7 +79,7 @@
         </div>
     </nav>
 </header>
-<main class="main is-relative is-flex-shrink-0" id="content">
+<main class="main is-relative is-flex-shrink-0" id="content" style="margin-top:100px;">
 	<?php $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false ); ?>
 	<?php if ( !empty( $iknowledgebase_settings['body_svg'] ) ) : ?>
         <svg class="intersect" viewBox="0 0 1441 279" xmlns="http://www.w3.org/2000/svg"
