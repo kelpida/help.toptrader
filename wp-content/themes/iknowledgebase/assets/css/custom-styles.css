@@ -266,9 +266,7 @@ a.panel-block:hover, label.panel-block:hover h4 {
 .breadcrumb ul li.is-active::before {
 	display:none;
 }
-.wp-block-categories-list li.current-cat a{
-	font-weight:bold;
-}
+
 .chat-blk {
 	background:#7D4ACE;
 	padding:40px 20px;
