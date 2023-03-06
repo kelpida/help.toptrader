@@ -191,7 +191,7 @@ a.panel-block:hover, label.panel-block:hover h4 {
 	height:50px !important;
 	padding:5px 20px !important;
 }
-.is-primary.input:hover {
+.is-primary.input:hover,.is-primary.input:focus {
 	border-right:none !important;
 }
 .search-form.is-relative .button.is-primary {
