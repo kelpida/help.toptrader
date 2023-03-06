@@ -102,6 +102,7 @@ body.custom-background {
 }
 .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
 	top:50%;
+	border:none !important;
 }
 .js-wpml-ls-item-toggle.wpml-ls-item-toggle {
 	float: right;
@@ -121,12 +122,21 @@ body.custom-background {
 	width: fit-content;
 	border: none;
 }
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+	font-size: 14px;
+	width: fit-content;
+}
+.wpml-ls-legacy-dropdown-click a {
+	font-size: 14px;
+	color:#333333;
+	border:none;
+}
 .menu-item:hover{
 	text-decoration:underline;
 	cursor:pointer;
 	color:#000000;
 }
-@media screen and (max-width:991px) {
+@media screen and (max-width:1024px) {
 	.navbar-item.has-dropdown.is-hoverable {
 		display: none;
 	}
