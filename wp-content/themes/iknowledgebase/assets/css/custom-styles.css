@@ -129,6 +129,11 @@ body.custom-background {
 	margin-top: -4px;
 	margin-right: 5px;
 }
+ul.convrs-chat {
+	position:relative;
+	bottom:50px
+
+}
 .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle::after {
 	top:50% !important;
 	border:none !important;
@@ -594,9 +599,6 @@ article .breadcrumb-single-post span {
 }
 .page-numbers.dots {
 	COLOR:#ffffff !important;
-}
-.convrs-chat-mainicon{
-	bottom:50px;
 }
 #was-this-helpful {
 	position: absolute;
