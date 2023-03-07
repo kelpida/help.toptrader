@@ -153,14 +153,7 @@ body.custom-background {
 	cursor:pointer;
 	color:#000000;
 }
-@media screen and (max-width:1024px) {
-	/*.navbar-item.has-dropdown.is-hoverable {*/
-	/*	display: none;*/
-	/*}*/
-	/*.menu-item.wpml-ls-slot-4 {*/
-	/*	display: none;*/
-	/*}*/
-}
+
 .categories-section {
 	display: flex !important;
 	flex-wrap: wrap !important;

@@ -32,9 +32,9 @@
 					<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
 				</a>
 				<!-- <?php iknowledgebase_brand(); ?> -->
-<!--                <div class="d-lg-none">-->
-<!--	            --><?php //do_action('wpml_add_language_selector');?>
-<!--                </div>-->
+                <div class="d-lg-none">
+	            <?php do_action('wpml_add_language_selector');?>
+                </div>
                 <a href="#" role="button" class="navbar-burger burger" id="navigation-burger"
                    aria-label="<?php esc_attr_e( 'Menu', 'iknowledgebase' ); ?>" aria-expanded="false"
                    data-target="main-menu" <?php iknowledgebase_amp_menu_toggle(); ?>>
@@ -44,7 +44,7 @@
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div id="main-menu" class="navbar-menu" <?php iknowledgebase_amp_menu_is_toggled(); ?>>
+            <div id="main-menu" class="navbar-menu">
                 <div class="navbar-start">
 					<?php
 					wp_nav_menu( array(
@@ -62,7 +62,7 @@
 					?>
                 </div>
 
-                <div class="navbar-end">
+                <div class="navbar-end" <?php iknowledgebase_amp_menu_is_toggled(); ?>>
 					<?php
 					wp_nav_menu( array(
 						'theme_location'  => 'end-nav',
