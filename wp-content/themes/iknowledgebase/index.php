@@ -30,55 +30,17 @@ get_header();
 					</div> -->
                 <div class="categories-section">
 				<?php
-				foreach ( get_categories() as $category ) :
-                    $category_link = get_category_link($category->cat_ID);
-                    $category_img = z_taxonomy_image_url($category->cat_ID);;
-                echo  '<a class="category-box" href='.$category_link.'>';
-                echo  "<img src='$category_img'/>";
-				echo  '<h3>'.$category->name.' </h3>';
-					echo  '</a>';
-				endforeach;
+				    foreach ( get_categories() as $category ) :
+                        $category_link = get_category_link($category->cat_ID);
+                        $category_img = z_taxonomy_image_url($category->cat_ID);;
+                        echo  '<a class="category-box" href='.$category_link.'>';
+                        echo  "<img src='$category_img'/>";
+				        echo  '<h3>'.$category->name.' </h3>';
+					    echo  '</a>';
+				    endforeach;
 				?>
                 </div>
-						<div class="categories-section">
-							<a class="category-box" href="general-questions/">
-								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.svg">
-								<h3>General <br/>Questions</h3>
-							</a>
-							<a href="accounts/" class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/accounts.svg">
-								<h3>Accounts</h3>
-							</a>
-							<a href="verification/" class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/verification.svg">
-								<h3>Verification</h3>
-							</a>
-							<a href="deposits-and-withdrawals/" class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/deposit.png">
-								<h3>Deposits & <br/>Withdrawals</h3>
-							</a>
-							<a href="platforms/" class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/platforms.svg">
-								<h3>Platforms</h3>
-							</a>
-							<a href="trading/" class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/trading.png">
-								<h3>Trading</h3>
-							</a>
-							<a href="signal-centre/" class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/signal-center.svg">
-								<h3>Signal <br/>Centre</h3>
-							</a>
-							<a href="finance/" class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/finance.svg">
-								<h3>Finance</h3>
-							</a>
-							<a href="security-and-privacy/" class="category-box">
-								<img src="<?php bloginfo('template_url'); ?>/images/security.svg">
-								<h3>Security & <br/>Privacy</h3>
-							</a>
-						
-						</div>
+
 
 					</div>
 				</div>
