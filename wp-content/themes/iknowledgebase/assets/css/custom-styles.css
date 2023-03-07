@@ -113,11 +113,9 @@ body.custom-background {
 .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
 	border:none !important;
 }
-.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
 
-}
 
-.wpml-ls-legacy-dropdown-click a span {
+.wpml-ls-native {
 	font-family: 'Girloy';
 	font-size:14px;
 }
