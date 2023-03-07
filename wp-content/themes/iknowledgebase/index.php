@@ -28,8 +28,25 @@ get_header();
 				<!-- <div class="box is-mobile">
 					<?php iknowledgebase_posts_sorter(); ?>
 					</div> -->
-
-				
+                <div class="categories-section">
+	                <?php if( is_category() ) { ?>
+                        <div class="taxonomy-image">
+                            <img class="taxonomy-img" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url(); ?>"  alt="" / >
+                        </div>
+		                <?php
+	                }
+	                ?>
+				<?php
+				foreach ( get_categories() as $category ) :
+                    $category_link = get_category_link($category->cat_ID);
+                    $category_img = get_category_link($category->cat_ID);
+                echo  '<a class="category-box" href='.$category_link.'>';
+                echo  "<img src='.$category_img+'.svg'/>";
+				echo  '<h3>'.$category->name.' </h3>';
+					echo  '</a>';
+				endforeach;
+				?>
+                </div>
 						<div class="categories-section">
 							<a class="category-box" href="general-questions/">
 								<img src="<?php bloginfo('template_url'); ?>/images/general-questions.svg">
@@ -69,6 +86,7 @@ get_header();
 							</a>
 						
 						</div>
+
 					</div>
 				</div>
 			</section>
