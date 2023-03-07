@@ -113,7 +113,7 @@ body.custom-background {
 .wpml-ls-legacy-dropdown-click a {
 	background: transparent !important;
 }
-.navbar .menu-item::after {
+.navbar .menu-item::after,.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
 	background-image:url('/wp-content/themes/iknowledgebase/images/down-arrow.svg');
 	border:none;
 	width: 11px;
@@ -123,7 +123,25 @@ body.custom-background {
 	margin-top: -4px;
 	margin-right: 5px;
 }
-
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
+	top:50%;
+}
+.wpml-ls-legacy-dropdown-click a {
+	border: none !important;
+	width: 65px !important;
+}
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+	border: 1px solid #dddddd;
+	width: 65px;
+}
+.wpml-ls-legacy-dropdown-click {
+	width: auto;
+	max-width: 100%;
+	margin-left: auto;
+}
+.wpml-ls-legacy-dropdown-click>ul {
+	top: 5px !important;
+}
 .menu-item:hover{
 	text-decoration:underline;
 	cursor:pointer;
@@ -623,6 +641,11 @@ article .breadcrumb-single-post span {
 @media screen and (max-width:991px){ 
 	.container {
 		max-width:none !important;
+	}
+	.wpml-ls-legacy-dropdown-click {
+		position: absolute;
+		right: 28px;
+		top: 0;
 	}
 }
 @media screen and (max-width:640px){
