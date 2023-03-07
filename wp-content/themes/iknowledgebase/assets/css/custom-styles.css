@@ -98,18 +98,22 @@ body.custom-background {
 .navbar-menu {
 	flex-grow: 0 !important;
 }
+.wpml-ls-legacy-dropdown-click .wpml-ls-item {
+	background-color:#ffffff !important;
+}
 .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
 	visibility: hidden;
 	position: absolute;
 	top: 100%;
 	right: 5px;
 	left: 0;
-	border-top: 1px solid #cdcdcd !important;
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
 	z-index: 101;
-	border-radius: 5px !important;
+	border-radius: 2px !important;
+	border: 1px solid #dddddd !important;
+	width: 65px;
 }
 .wpml-ls-legacy-dropdown-click a {
 	background: transparent !important;
@@ -135,10 +139,7 @@ body.custom-background {
 	border: none !important;
 	width: 65px !important;
 }
-.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
-	border: 1px solid #dddddd;
-	width: 65px;
-}
+
 .wpml-ls-legacy-dropdown-click {
 	width: auto!important;
 	max-width: 100%!important;
