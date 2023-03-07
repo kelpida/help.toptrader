@@ -82,8 +82,8 @@ body.custom-background {
 .navbar-burger.is-active span:nth-child(4) {
 	opacity: 0;
 }
-.navbar-end {
-	font-size:14px;
+.navbar-end,.wpml-ls-native {
+	font-size:14px !important;
 }
 .navbar-brand {
 	margin-right:0;
