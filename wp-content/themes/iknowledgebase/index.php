@@ -34,7 +34,7 @@ get_header();
                     $category_link = get_category_link($category->cat_ID);
                     $category_img = z_taxonomy_image_url($category->cat_ID);;
                 echo  '<a class="category-box" href='.$category_link.'>';
-                echo  "<img src='.$category_img'/>";
+                echo  "<img src='$category_img'/>";
 				echo  '<h3>'.$category->name.' </h3>';
 					echo  '</a>';
 				endforeach;
