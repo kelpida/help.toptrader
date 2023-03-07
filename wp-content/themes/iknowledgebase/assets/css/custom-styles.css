@@ -598,7 +598,7 @@ article .breadcrumb-single-post span {
 	cursor:pointer;
 }
 .page-numbers.dots {
-	COLOR:#ffffff !important;
+	color:#ffffff !important;
 }
 #was-this-helpful {
 	position: absolute;
@@ -654,7 +654,7 @@ article .breadcrumb-single-post span {
 	}
 	.wpml-ls-legacy-dropdown-click {
 		position: absolute;
-		right: 28px;
+		right: 40px;
 		top: 0;
 	}
 }
