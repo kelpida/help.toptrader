@@ -101,51 +101,6 @@ body.custom-background {
 	margin-right: 5px;
 }
 
-.wpml-ls-legacy-dropdown-click {
-	width: fit-content !important;
-	max-width: 100%;
-	float: right;
-}
-.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
-	top:50% !important;
-	border:none !important;
-}
-.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
-	border:none !important;
-}
-
-
-.wpml-ls-native {
-	font-family: 'Girloy';
-	font-size:14px;
-}
-.wpml-ls-legacy-dropdown-click a {
-	display: block;
-	text-decoration: none;
-	color: #333333;
-	background-color: #fff;
-	padding: 5px 10px;
-	line-height: 1;
-	font-size: 14px;
-	border: none;
-}
-.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
-	font-size: 14px;
-	left:auto !important;
-	border-top: none !important;
-}
-.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu a {
-	border-width: 0;
-}
-.wpml-ls-legacy-dropdown-click a {
-	font-size: 14px;
-	color:#333333;
-	border:none;
-	border-top: none !important;
-}
-.wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover>a, .wpml-ls-legacy-dropdown-click a:focus, .wpml-ls-legacy-dropdown-click a:hover {
-	background: none !important;
-}
 .menu-item:hover{
 	text-decoration:underline;
 	cursor:pointer;
