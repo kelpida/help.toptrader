@@ -92,10 +92,10 @@ body.custom-background {
 	margin-right:0;
 	padding-left:15px;
 	padding-right: 0;
-	flex-grow:1;
+	flex-grow:1 !important;
 }
 .navbar-menu {
-	flex-grow: 0;
+	flex-grow: 0 !important;
 }
 .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
 	visibility: hidden;
@@ -108,10 +108,10 @@ body.custom-background {
 	margin: 0;
 	list-style-type: none;
 	z-index: 101;
-	border-radius: 5px;
+	border-radius: 5px !important;
 }
 .wpml-ls-legacy-dropdown-click a {
-	background: transparent;
+	background: transparent !important;
 }
 .navbar .menu-item::after {
 	background-image:url('/wp-content/themes/iknowledgebase/images/down-arrow.svg');
