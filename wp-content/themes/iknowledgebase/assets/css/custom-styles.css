@@ -602,6 +602,9 @@ article .breadcrumb-single-post span {
     right: 30px;
     text-align: right;
 }
+.footer .navbar-link.is-active, .footer .navbar-link:focus, .footer .navbar-link:focus-within, .footer .navbar-link:hover, .footer a.navbar-item.is-active, .footer a.navbar-item:focus, .footer a.navbar-item:focus-within, .footer a.navbar-item:hover {
+	color:#000 !important;
+}
 @media screen and (min-width:720px) and (max-width:900px){
 	.category-box {
 		width:50%;
