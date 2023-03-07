@@ -85,12 +85,17 @@ body.custom-background {
 .navbar-end,.wpml-ls-native {
 	font-size:14px !important;
 }
+.navbar-link:not(.is-arrowless) {
+	padding-right: 40px;
+}
 .navbar-brand {
 	margin-right:0;
 	padding-left:15px;
-	padding-right:15px;
+	padding-right: 0;
+	width: 63%;
 }
-.navbar .menu-item::after,.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after {
+
+.navbar .menu-item::after {
 	background-image:url('/wp-content/themes/iknowledgebase/images/down-arrow.svg');
 	border:none;
 	width: 11px;

@@ -31,6 +31,20 @@
 				<a href="<?php echo get_home_url(); ?>">
 					<img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Help TopTraderEu">
 				</a>
+	            <?php do_action('wpml_add_language_selector');?>
+
+
+				<!-- <?php iknowledgebase_brand(); ?> -->
+                <a href="#" role="button" class="navbar-burger burger" id="navigation-burger"
+                   aria-label="<?php esc_attr_e( 'Menu', 'iknowledgebase' ); ?>" aria-expanded="false"
+                   data-target="main-menu" <?php iknowledgebase_amp_menu_toggle(); ?>>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="main-menu" class="navbar-menu" <?php iknowledgebase_amp_menu_is_toggled(); ?>>
                 <div class="navbar-start">
 		            <?php
 		            wp_nav_menu( array(
@@ -47,18 +61,6 @@
 		            ) );
 		            ?>
                 </div>
-				<!-- <?php iknowledgebase_brand(); ?> -->
-                <a href="#" role="button" class="navbar-burger burger" id="navigation-burger"
-                   aria-label="<?php esc_attr_e( 'Menu', 'iknowledgebase' ); ?>" aria-expanded="false"
-                   data-target="main-menu" <?php iknowledgebase_amp_menu_toggle(); ?>>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div id="main-menu" class="navbar-menu" <?php iknowledgebase_amp_menu_is_toggled(); ?>>
-
 
                 <div class="navbar-end">
 					<?php
