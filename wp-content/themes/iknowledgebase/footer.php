@@ -10,11 +10,12 @@
 			<section class="chat-blk">
 				<div class="container">
 					<div class="chat-blk-text">
-						<h6>Not finding what you are looking for?</h6>
-						<p>Chat with us or send us an email</p>
+						<h6><?php _e('Not finding what you are looking for?','chat-with-us-header');?></h6>
+						<p><?php _e('Chat with us or send us an email','chat-with-us-desc');?></p>
 					</div>
 					<div class="button is-info chat" id="chatWithUs" onclick="ConvrsChat.ShowChannels()">
-						Chat with us
+                        <?php _e('Chat with us','chat-with-us-button');?>
+
 						<img src="<?php bloginfo('template_url'); ?>/images/messages3.svg">
 					</div>
 				</div>
