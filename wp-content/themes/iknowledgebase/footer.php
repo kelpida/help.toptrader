@@ -109,7 +109,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-					<p>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <span>89.08% of retail investor accounts lose money when trading CFDs with this provider</span>. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
+				<p><?php _e("CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <span>89.08% of retail investor accounts lose money when trading CFDs with this provider</span>. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.",'bottom-banner');?></p>
 			</div>
 		</div>
 	</div>
