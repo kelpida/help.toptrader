@@ -200,6 +200,9 @@ ul.convrs-chat {
 	text-align:right;
 	width:100px;
 }
+html:lang(el) .category-box h3 {
+	font-family:'Arial' !important;
+}
 .content h3 {
 	color:#000000;
 }
