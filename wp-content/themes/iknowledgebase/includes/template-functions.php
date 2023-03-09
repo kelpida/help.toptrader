@@ -251,7 +251,7 @@ function iknowledgebase_breadcrumbs() {
 	$separator        = get_theme_mod( 'iknowledgebase_breadcrumb_separators', '' );
 	$separators_class = ! empty( $separator ) ? ' has-' . esc_attr( $separator ) . '-separator' : '';
 	echo '<nav class="row align-items-center is-size-7 is-hidden-mobile' . esc_attr( $separators_class ) . '" aria-label="breadcrumbs">';
-	echo ' <div class="col-md-3 text-left"><a class="back-link" href="' . esc_url( home_url() ) . '"><img src="' . esc_url( home_url() ) . '/wp-content/themes/iknowledgebase/images/arrowleft.svg"/><span>' . esc_html__( 'Back', 'iknowledgebase' ) . '</span></a></div>';
+	echo ' <div class="col-md-3 text-left"><a class="back-link" href="' . esc_url( home_url() ) . '"><img src="' . bloginfo('template_url') . '/images/arrowleft.svg"/><span>' . esc_html__( 'Back', 'iknowledgebase' ) . '</span></a></div>';
 	if ( is_category() || is_tag() ) {
 		$object = get_queried_object();
 		if ( ! empty( $object->parent ) ) {
