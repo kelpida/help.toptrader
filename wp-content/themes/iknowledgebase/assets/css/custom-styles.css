@@ -134,6 +134,21 @@ ul.convrs-chat {
 	bottom:50px
 
 }
+@media screen and (max-width:640px){
+	ul.convrs-chat {
+		bottom: 60px;
+	}
+}
+@media screen and (max-width:520px){
+	ul.convrs-chat {
+		bottom: 70px;
+	}
+}
+@media screen and (max-width:415px){
+	ul.convrs-chat {
+		bottom: 80px;
+	}
+}
 .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle::after {
 	top:50% !important;
 	border:none !important;
