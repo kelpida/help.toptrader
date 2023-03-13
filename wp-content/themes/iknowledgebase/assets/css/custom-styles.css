@@ -215,6 +215,9 @@ ul.convrs-chat {
 	text-align:right;
 	width:100px;
 }
+html:lang(el) * {
+	font-family:'Arial' !important;
+}
 html:lang(el) .category-box h3 {
 	font-family:'Arial' !important;
 	width:160px !important;
@@ -692,6 +695,12 @@ article .breadcrumb-single-post span {
 	}
 	.category-box {
 		width:100%;
+	}
+	#was-this-helpful {
+		justify-content: flex-start !important;
+		position: relative;
+		right:0;
+		margin-bottom:-10px;
 	}
 }
 @media screen and (max-width: 1023px){

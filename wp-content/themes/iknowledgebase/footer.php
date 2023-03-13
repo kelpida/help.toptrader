@@ -124,6 +124,7 @@
             function () {
                 $(this).data('title', $(this).attr('title')).removeAttr('title');
             },
+
             function () {
                 $(this).attr('title', $(this).data('title'));
             }
