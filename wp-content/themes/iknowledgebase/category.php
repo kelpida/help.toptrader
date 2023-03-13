@@ -15,7 +15,7 @@ $iknowledgebase_settings = get_option( 'iknowledgebase_settings', false );
            <?php get_search_form(); ?>
 	    </div>
 			<div class="columns pt-5">
-				<div class="column is-full-touch pt-0">
+				<div class="column is-full-touch">
 				 <?php iknowledgebase_breadcrumbs(); ?>
 			 </div>
 			</div>
